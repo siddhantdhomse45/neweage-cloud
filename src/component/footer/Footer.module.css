@@ -1,0 +1,165 @@
+.footermain1 {
+  position: relative; 
+  padding: 30px 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.footermain1::before {
+  content: ''; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../assets/footerback.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.footermain1::after {
+  content: ''; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; 
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.footermain1{
+  display: flex;
+  justify-content: start;
+  padding: 50px 180px;
+}
+
+.footer55 {
+  flex: 1;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.footercontainer1 {
+  position: relative;
+  z-index: 3;
+  margin: 0;
+  padding: 0;
+}
+
+.footercontainer1 h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 35px auto 20px 0px;
+  color: #ffffff;
+}
+
+.footercontainer p {
+  font-size: 16px;
+  margin: 0px 0px 5px 0px; 
+  color: #ffffff;
+}
+
+.rpsolutionlogo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.rpsolutionlogo h1{
+  color: #df2a16 ;
+  text-align: left;
+}
+
+.footerh2 p{
+  text-align: start;
+  color: #ffffff;
+}
+
+.rpsolutionlogo img{
+  width: 85px;
+  height: 85px;  
+}
+
+
+.footercontainer1 h4 {
+  text-align: start;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #df2a16;
+}
+
+.footercontainer1 p{
+  text-align: start;
+  color: white;
+}
+
+.bold-text {
+  font-weight: bold;
+  text-align: center;
+}
+
+.footerlast{
+  border-top: 1px solid white;
+  background-color: rgb(7, 0, 0);
+}
+
+.footerlast h5 {
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .footermain1 {
+    padding: 30px 20px; 
+    flex-direction: column; 
+    text-align: center; 
+  }
+
+  .footer55 {
+    padding: 0 30px;
+    width: 100%;
+  }
+
+  .footercontainer1{
+    padding: 0px 30px;
+  }
+
+  .footercontainer1 h2 {
+    font-size: 22px;
+    margin: 25px 0;
+  }
+
+  .footercontainer p {
+    font-size: 14px;
+  }
+
+  .rpsolutionlogo {
+    flex-direction: column; 
+    align-items: start;
+  }
+
+  .rpsolutionlogo img {
+
+    width: 70px; 
+    height: 70px;
+  }
+
+  .footercontainer1 h4 {
+    font-size: 16px;
+  }
+
+  .footerlast h5 {
+    font-size: 12px; 
+  }
+}

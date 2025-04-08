@@ -1,0 +1,147 @@
+@keyframes appear{
+from{
+  opacity: 0;
+  scale: 0.5;
+}
+to{
+opacity: 1;
+scale: 1;
+}
+}
+.contactForm{
+  animation: appear 1s linear;
+}
+
+.contactInfo{
+  animation: appear 1s linear;
+}
+
+
+.contactContainer444 {
+  background-image: url(../../assets/Adminback.jpeg);
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+}
+
+.contactmain {
+  padding: 200px 200px 100px 200px;
+  display: flex;
+}
+
+.contactInfo {
+  flex: 1;
+  text-align: justify;
+  color: white;
+  padding: 3rem;
+  border-radius: 10px;
+}
+
+.contactInfo h3 {
+  color: #df2a16;
+  margin-bottom: 10px;
+}
+
+.contactInfo p {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.contactInfo ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contactInfo ul li {
+  margin-bottom: 10px;
+}
+
+.contactInfo strong {
+  color: #df2a16;
+}
+
+.socialLinks {
+  margin-top: 20px;
+  color: #df2a16;
+}
+
+.socialLinks span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.socialLinks a {
+  margin-right: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #df2a16;
+}
+
+.contactForm {
+  flex: 1;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.contactForm h3 {
+  color: #df2a16;
+  margin-bottom: 10px;
+}
+
+.contactForm p {
+  margin-bottom: 20px;
+}
+
+.input,
+.textarea {
+  padding: 10px;
+  width: 95%;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.textarea {
+  height: 150px;
+  resize: none;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #df2a16;
+  color: white;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #771d13;
+}
+
+
+@media (max-width: 768px) {
+  .contactContainer444 {
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .contactmain {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .contactInfo, .contactForm {
+    width: 80%;
+    padding: 10px;
+  }
+}

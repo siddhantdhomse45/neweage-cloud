@@ -1,0 +1,101 @@
+.callmailMain {
+  background-color: #d63333;
+  display: flex;
+  padding: 20px 180px;
+  text-align: start;
+  border-radius: 50px;
+  margin-bottom: 2px; 
+  justify-content: space-between;
+}
+
+.header h4 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.callmailcontaner {
+  gap: 20px;
+}
+
+.contactContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contactBlock1 {
+  display: flex;
+  align-items: center;
+  background-color: #fff7f7;
+  padding: 15px;
+  border-radius: 18px 0px;
+  width: 300px;
+}
+
+.iconContainer img {
+  width: 40px;
+  height: 40px;
+  margin: 20px;
+}
+
+.contactInfo h6 {
+  font-size: 1.2rem;
+  margin: 0 0 5px 0;
+}
+
+.contactInfo p {
+  margin: 0;
+}
+
+.imageContainer img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 30px 0px;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .callmailMain {
+    padding: 20px 40px; 
+    flex-direction: column;
+    
+  }
+
+  .header h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  .contactContainer {
+    gap: 15px;
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .contactBlock1 {
+    margin-bottom: 28px;
+    width: 90%;
+    padding: 15px;
+  }
+
+  .iconContainer img {
+    width: 35px;
+    height: 35px;
+    margin: 15px;
+  }
+
+  .contactInfo h6 {
+    font-size: 1rem;
+  }
+
+  .imageContainer img {
+    width: 100%; 
+    max-width: 100%; 
+    border-radius: 10px;
+  }
+}

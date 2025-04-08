@@ -1,0 +1,87 @@
+.aboutheromain {
+  position: relative;
+  background-image: url(../../../assets/aboutback.jpg);
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+.aboutheromain::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../assets/aboutback.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.aboutheromain::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.aboutheromain > * {
+  position: relative;
+  z-index: 3;
+}
+
+.aboutmain22 {
+  padding: 0px 180px;
+  margin: 0;
+}
+
+.aboutmain22 h1 {
+  color: #d63333;
+}
+
+.aboutmain22 h6 {
+  color: #ffffff;
+}
+
+.aboutmain22 p {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .aboutheromain {
+    height: auto;
+    min-height: 70vh; 
+    flex-direction: column; 
+    justify-content: center; 
+  }
+
+  .aboutmain22 {
+    padding: 0;
+    width: 95%; 
+    max-width: none; 
+    text-align: center; 
+  }
+
+  .aboutmain22 h1 {
+    font-size: 1.5rem;
+  }
+
+  .aboutmain22 h6 {
+    font-size: 1.2rem;
+  }
+
+  .aboutmain22 p {
+    font-size: 0.9rem;
+  }
+}

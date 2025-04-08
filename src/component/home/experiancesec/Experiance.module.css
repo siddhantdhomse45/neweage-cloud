@@ -1,0 +1,141 @@
+.experianceMainSection {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: start;
+  text-align: start;
+  padding: 20px 180px;
+  background-color: #ffffff;
+}
+
+
+.contentSection {
+  flex: 1;
+  width: 60%;
+}
+
+.imageSection {
+  flex: 1;
+  width: 35%;
+}
+
+.imageSection img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+.contentSection,
+.imageSection {
+  opacity: 0;
+  transform: translateY(50px) scale(0.9);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+
+.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+
+.headingSection h6 {
+  margin-top: 0;
+  text-align: start;
+  font-size: 24px;
+  color: #d63333;
+  margin-bottom: 0px;
+}
+
+.headingSection h2 {
+  font-size: 39px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.headingSection p {
+  font-size: 16px;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+
+.networkSection,
+.teamSection {
+  margin-bottom: 20px;
+  border: 1px solid #dddddd;
+  padding: 15px;
+  width: 88%;
+}
+
+.networkSection h2,
+.teamSection h2 {
+  padding-left: 3rem;
+  font-size: 22px;
+  color: #000000;
+}
+
+
+.moreInfoSection p {
+  font-size: 14px;
+  color: #343a40;
+}
+.moreInfoSection p span {
+  color: #d63333;
+}
+
+
+@media screen and (max-width: 768px) {
+  .experianceMainSection {
+    padding: 20px 40px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contentSection {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .imageSection {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .headingSection h2 {
+    font-size: 28px;
+  }
+
+  .headingSection p {
+    font-size: 14px;
+  }
+
+  .networkSection,
+  .teamSection {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .networkSection h2,
+  .teamSection h2 {
+    padding-left: 0;
+    font-size: 20px;
+  }
+
+  .moreInfoSection p {
+    font-size: 12px;
+  }
+}

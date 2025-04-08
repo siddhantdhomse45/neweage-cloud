@@ -1,0 +1,85 @@
+.careerOneMain {
+  padding: 20px 180px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.header h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+
+.programsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.program {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 320px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.program:hover {
+  transform: scale(1.05);
+}
+
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.imageContainer img {
+  width: 80px;
+  height: auto;
+}
+
+
+.textContainer h2 {
+  font-size: 1.5rem;
+  color: #d63333;
+  margin-bottom: 10px;
+}
+
+.textContainer p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+@media (max-width: 768px) {
+  .careerOneMain {
+    padding: 20px;
+  }
+
+  .program {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .imageContainer img {
+    width: 70px;
+  }
+
+  .textContainer h2 {
+    font-size: 1.2rem;
+  }
+
+  .textContainer p {
+    font-size: 0.9rem;
+  }
+}

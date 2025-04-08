@@ -1,0 +1,162 @@
+.moremain {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: start;
+  padding: 20px 180px;
+  gap: 30px;
+}
+
+.imageContainer,
+.contentContainer {
+  display: flex;
+  flex: 1;
+  margin: 0;
+  align-items: stretch;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.headerContainer77,
+.solutionsContainer,
+.featuresListContainer,
+.buttonContainer {
+  display: flex;
+  text-align: start;
+  flex-direction: column;
+}
+
+.headerContainer77 h5 {
+  margin: 0;
+  color: #df2a16;
+}
+
+.headerContainer77 h2 {
+  margin-top: 0;
+}
+
+.solutionsContainer22 { 
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.solution {
+  padding-top: 20px;
+  width: 170px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.solutionImageContainer {
+  flex: 1;
+}
+
+.solutionImageContainer1 img {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+}
+
+.solutionTextContainer {
+  text-align: center;
+}
+
+.featuresListContainer0 {
+  display: flex;
+  list-style-type: none;
+  margin: 0px;
+  border: 1px solid black;
+}
+
+.featuresListContainer11 {
+  flex: 1;
+}
+
+.buttonContainer1 button {
+  margin-top: 15px;
+  color: white;
+  text-align: start;
+  cursor: pointer;
+  background-color: #df2a16;
+}
+
+
+/*animatiomm part*/
+
+/* Default hidden state */
+.imageContainer, .contentContainer {
+  opacity: 0;
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Left-side animation */
+.imageContainer {
+  transform: translateX(-100px);
+}
+
+/* Right-side animation */
+.contentContainer {
+  transform: translateX(100px);
+}
+
+/* When in view, apply animation */
+.leftVisible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.rightVisible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .moremain {
+    padding: 20px 40px; 
+    gap: 20px;
+  }
+
+  .imageContainer,
+  .contentContainer {
+    flex: 1 1 100%; 
+    justify-content: center; 
+  }
+
+  .solutionsContainer22 {
+    flex-direction: column; 
+    gap: 15px;
+  }
+
+  .solution {
+    width: 100%; 
+    height: auto;
+    margin-bottom: 20px; 
+  }
+
+  .solutionImageContainer1 img {
+    width: 80px; 
+  }
+
+  .buttonContainer1 button {
+    width: 100%; 
+    text-align: center; 
+    padding: 12px; 
+  }
+}

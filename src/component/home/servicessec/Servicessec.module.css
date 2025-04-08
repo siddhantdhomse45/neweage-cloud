@@ -1,0 +1,82 @@
+.servicesMainSection {
+   padding: 20px 180px;
+    background-color: #f8f9fa;
+  }
+  
+  .headerSection h5 {
+    text-align: center;
+    font-size: 18px;
+    color: #d63333;
+    margin-bottom: 5px;
+  }
+  
+  .headerSection h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #000000;
+  }
+  
+  .servicesSection {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .serviceItem {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 0px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .serviceItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .imageWrapper img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .textWrapper{
+    padding: 0;
+    margin: 0;
+  }
+
+
+  .textWrapper h2 {
+    text-align: center;
+    color: #000000;
+  }
+  
+  .textWrapper p {
+    text-align: center;
+    font-size: 20px;
+    color: #000000;
+  }
+  
+
+@media screen and (max-width: 768px) {
+  .servicesMainSection {
+    padding: 20px 40px; 
+  }
+
+  .headerSection h2 {
+    font-size: 24px; 
+  }
+
+  .serviceItem {
+    width: 45%; }
+
+  .textWrapper p {
+    font-size: 16px; 
+  }
+}
