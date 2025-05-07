@@ -14,34 +14,35 @@ const Aboutleaders = () => {
       <div className={styles.leadersGrid}>
         <div className={styles.leaderCard}>
           <div className={styles.imageWrapper}>
-            <img className={styles.image} src={aboutleader1} alt="Swapnil Kattare" />
+            <img className={styles.image} src={aboutleader1} alt="john" />
           </div>
           <div className={styles.textWrapper}>
-            <h3 className={styles.name}>Tejashri </h3>
+            <h3 className={styles.name}>John </h3>
             <p className={styles.position}>Founder</p>
           </div>
         </div>
 
         <div className={styles.leaderCard}>
           <div className={styles.imageWrapper}>
-            <img className={styles.image} src={aboutleader2} alt="Siddhant Thomse" />
+            <img className={styles.image} src={aboutleader2} alt="michel" />
           </div>
           <div className={styles.textWrapper}>
-            <h3 className={styles.name}>Siddhant Thomse</h3>
+            <h3 className={styles.name}>Michel </h3>
             <p className={styles.position}>Manager</p>
           </div>
         </div>
 
         <div className={styles.leaderCard}>
           <div className={styles.imageWrapper}>
-            <img className={styles.image} src={aboutleader3} alt="Gudiya Pawar" />
+            <img className={styles.image} src={aboutleader3} alt="Anisha" />
           </div>
           <div className={styles.textWrapper}>
-            <h3 className={styles.name}>Gudiya Pawar</h3>
+            <h3 className={styles.name}>Anisha</h3>
             <p className={styles.position}>Founder</p>
           </div>
         </div>
       </div>
+      
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import RPSolution from "/src/assets/RPSolution.png";
+// import RPSolution from "/src/assets/RPSolution.png";
 import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
 
@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbarmain}>
       <div className={styles.logo}>
-      <Link to="/"><img src={RPSolution} alt="logo" /></Link>
+      <Link to="/"><img src="	https://neweageclouds.com/NeweageLogo.png" alt="logo" /></Link>
       </div>
       <button className={styles.hamburger} onClick={toggleMenu}>
         ☰

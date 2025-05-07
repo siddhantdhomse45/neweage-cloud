@@ -43,7 +43,7 @@ const Moresec = () => {
             <br /> Choose Best Solutions.
           </h2>
           <p>
-            RP Solutions, management & support services Business
+          Neweage Cloud , management & support services Business
             business agency e lit, sed do eiusmod tempor majority have in some
             we form, by injected humour solution.
           </p>

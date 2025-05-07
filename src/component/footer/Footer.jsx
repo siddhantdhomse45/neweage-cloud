@@ -1,5 +1,4 @@
 import React from "react";
-import RPSolution from "/src/assets/RPSolution.png";
 import styles from "./Footer.module.css";
 import { Link } from "react-router-dom";
 
@@ -11,10 +10,10 @@ const Footer = () => {
           <div className={styles.rpsolutionlogo}>
             <div>
               <Link to="/">
-                <img src={RPSolution} alt="img" />
+                <img src="https://neweageclouds.com/NeweageLogo.png" alt="img" />
               </Link>
             </div>
-            <h1>RP Business Solutions LLP.</h1>
+            <h1>Neweage Cloud Software Service Pvt Ltd.</h1>
           </div>
           <div className={styles.footerh2}>
             <p>
@@ -25,23 +24,24 @@ const Footer = () => {
         </div>
         <div className={styles.footercontainer1}>
           <p>
-            <h4>Address:</h4> 401/402, <br />
-            4th Floor Sai Villa Commercial Appartment, <br />
-            Sr No 166, Malwadi road, <br />
-            Opps. to Sahyadri Hospital, <br />
-            Hadapsar Pune-411028
+            <h4>Address:</h4> ​​Office No. 4-C,Second Floor, <br />
+            Ganesham Commercial -A, Survey No. <br />
+            21/18-21/24, BRTS Road, Pimple <br />
+            Saudagar, Pune- 411027 <br />
+            
           </p>
           <p>
-            <h4>Contact:</h4>897517234
+            <h4>Contact:</h4>+919112100662
           </p>
           <p>
-            <h4>Email Us:</h4> hr@devconssoftware.com
+            <h4>Email Us:</h4> hr@neweageclouds.com,
+            hr@neweageclouds.com
           </p>
         </div>
       </div>
       <div className={styles.footerlast}>
         <h5>
-          © Copyright 2025 RP Business Solutions LLP. All Rights Reserved.
+          © Copyright 2025 Neweage clouds Solutions LLP. All Rights Reserved.
         </h5>
       </div>
     </>

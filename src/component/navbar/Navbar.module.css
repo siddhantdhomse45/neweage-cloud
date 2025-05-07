@@ -5,12 +5,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 96%;
+  width: 99%;
   background: transparent;
   margin: 0;
   z-index: 100;
   padding-top: 15px;
   padding-left: 15px;
+  background-color: #fff;
 }
 
 .logo img {
@@ -21,6 +22,7 @@
 .menu {
   display: flex;
   align-items: center;
+ 
 }
 
 .navLinks {
@@ -29,6 +31,7 @@
   padding: 0;
   margin: 0;
   list-style: none;
+ 
 }
 
 .navLinks li {
@@ -36,7 +39,7 @@
 }
 
 .navLinks a {
-  color: white;
+  color: black;
   padding: 10px 15px;
   text-decoration: none;
   display: block;
@@ -50,7 +53,7 @@
 
 .button {
   margin-left: 20px;
-  background-color: #df2a16;
+  background-color: #10e18a;
   color: #fff;
   border-radius: 45px;
   padding: 10px 20px;
@@ -61,8 +64,9 @@
 }
 
 .button:hover {
-  background-color: #c22412;
+  background-color: #0ce1b3;
 }
+
 
 .hamburger {
   display: none;

@@ -5,10 +5,10 @@ const Abouthero = () => {
   return (
     <div className={styles.aboutheromain}>
       <div className={styles.aboutmain22}>
-        <h1>ABOUT RP BUSINESS SOLUTION LLP.</h1>
+        <h1>ABOUT Neweage Cloud Software Service Pvt Ltd.</h1>
         <h6>Charting Your Path to Success.</h6>
         <p>
-          "Join RPBS, where talent meets opportunity.
+          "Join Neweage Cloud, where talent meets opportunity.
           <br />
           Explore growth, innovation, and a supportive culture."
         </p>

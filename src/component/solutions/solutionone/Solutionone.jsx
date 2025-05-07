@@ -9,7 +9,7 @@ const Solutionone = () => {
         <div className={styles.scontainer1}>
           <h2>Understanding of Client Needs</h2>
           <p>
-            At RPBS, we understand that every business is unique. Our success
+            At NEWEAGE CLOUD SOFTWARE SERVICES PRIVATE LIMITED, we understand that every business is unique. Our success
             stems from our deep understanding of our clients' needs, enabling us
             to provide tailored solutions that precisely address their
             challenges and aspirations.
@@ -18,7 +18,7 @@ const Solutionone = () => {
         <div className={styles.scontainer2}>
           <h2>Commitment to Innovation</h2>
           <p>
-            person graphic Understanding of Client Needs At RPBS, we understand
+            person graphic Understanding of Client Needs At NCSS, we understand
             that every business is unique. Our success stems from our deep
             understanding of our clients' needs, enabling us to provide tailored
             solutions that precisely address their challenges and aspirations.
@@ -40,7 +40,7 @@ const Solutionone = () => {
         <div className={styles.scontainer2}>
           <h2>Establishing Trust</h2>
           <p>
-            Positioning RPBS as a trusted partner reinforces the idea that
+            Positioning NCSS as a trusted partner reinforces the idea that
             clients can rely on the company to deliver results and support them
             throughout their journey.
           </p>

@@ -1,12 +1,12 @@
 @keyframes changeBackground {
   0% {
-    background-image: url("../../../assets/Homeslider1.jpg");
+    background-image: url("../../../assets/newedgeSlider.jpg");
   }
   50% {
-    background-image: url("../../../assets/Homeslider2.jpg");
+    background-image: url("../../../assets/Webdevelopment.jpg");
   }
   100% {
-    background-image: url("../../../assets/Homeslider3.jpg");
+    background-image: url("../../../assets/aboutus.png");
   }
 }
 
@@ -36,7 +36,7 @@
 .heroword h5 {
   color: white;
   margin: 10px 0;
-  text-align: right;
+  text-align: left;
   line-height: 1.3;
 }
 
@@ -89,4 +89,30 @@
   .heroimage22 img {
     display: none;
   }
+}
+
+.arrowLeft, .arrowRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.arrowLeft {
+  left: 20px;
+}
+
+.arrowRight {
+  right: 20px;
+}
+
+.arrowLeft:hover,
+.arrowRight:hover {
+  background-color: rgba(0, 0, 0, 0.6);
 }
