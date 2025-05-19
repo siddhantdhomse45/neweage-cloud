@@ -1,90 +1,70 @@
 .solutionheroback {
   position: relative;
-  background-image: url(../../../assets/Solution11.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 5rem;
   width: 100%;
   height: 100vh;
+  background: url(../../../assets/Solution11.jpg) center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 0 10vw;
+  box-sizing: border-box;
 }
 
-.solutionheroback::before {
-  content: "";
+.overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(../../../assets/Solution11.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* soft dark overlay */
   z-index: 1;
 }
 
-.solutionheroback::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0.5;
+.solutionMain {
+  position: relative;
   z-index: 2;
-}
-
-.solutionheroback > * {
-  position: absolute;
-  z-index: 3;
-}
-
-.solutionMain{
-  padding: 0px 180px;
-  margin: 0px;
-  text-align: start;
+  max-width: 800px;
+  color: white;
 }
 
 .solutionMain h1 {
-  padding: 0px;
-  margin: 0px;
-  color: #d63333;
-  font-size: 50px;
+  font-size: 3.5rem;
+  color: #17e76e;
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
 
-
-.solutionMain p{
-  padding: 0px;
-  margin: 0px;
-  color: white;
-  font-size: larger;
+.solutionMain p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #f1f1f1;
 }
 
-@media (max-width: 768px) {
-  .solutionheroback {
-    padding: 0;
-    height: auto; 
-    min-height: 70vh; 
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
-    
-  }
-
-  .solutionMain {
-    padding: 0px;
-    text-align: center;
-    width: 95%; 
-    max-width: none; 
-  }
-
+/* Responsive Design */
+@media (max-width: 992px) {
   .solutionMain h1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 
   .solutionMain p {
-    font-size: 0.9rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .solutionheroback {
+    padding: 60px 20px;
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .solutionMain {
+    text-align: center;
+  }
+
+  .solutionMain h1 {
+    font-size: 2rem;
+  }
+
+  .solutionMain p {
+    font-size: 0.95rem;
   }
 }

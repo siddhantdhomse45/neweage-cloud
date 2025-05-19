@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./Contactsection.module.css";
+import { Link } from "react-router-dom";
 
 const Contactsection = () => {
   const sectionRef = useRef(null);
@@ -10,27 +11,21 @@ const Contactsection = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
+        if (entry.isIntersecting) setIsVisible(true);
       },
-      { threshold: 0.3 } // Trigger when 30% of the section is visible
+      { threshold: 0.3 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    if (sectionRef.current) observer.observe(sectionRef.current);
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
     };
   }, []);
 
   useEffect(() => {
     if (isVisible) {
-      let interval = setInterval(() => {
+      const interval = setInterval(() => {
         setPercentage((prev) => {
           if (prev >= targetPercentage) {
             clearInterval(interval);
@@ -43,8 +38,11 @@ const Contactsection = () => {
   }, [isVisible]);
 
   return (
-    <div ref={sectionRef} className={`${styles.sectionMain} ${isVisible ? styles.visible : ""}`}>
-      <div className={styles.percentageDiv}>
+    <section
+      ref={sectionRef}
+      className={`${styles.sectionMain} ${isVisible ? styles.visible : ""}`}
+    >
+      <div className={styles.circleWrapper}>
         <svg className={styles.progressCircle} width="120" height="120">
           <circle className={styles.backgroundCircle} cx="60" cy="60" r="50" />
           <circle
@@ -56,23 +54,20 @@ const Contactsection = () => {
             strokeDashoffset={314 - (314 * percentage) / 100}
           />
         </svg>
-        <div className={styles.percentageDivinner}>{percentage}%</div>
+        <div className={styles.percentageText}>{percentage}%</div>
       </div>
-      <div className={styles.detailsDiv}>
-        <div className={styles.headingDiv}>
-          <h3>We Provide More Details Let Me Know Solution <br/>What You Need Help</h3>
-        </div>
-        <div className={styles.paragraphDiv}>
-          <p>
-            Technology is a broad category encompassing information technology<br/>
-            and the application of technology.
-          </p>
-        </div>
+
+      <div className={styles.contentWrapper}>
+        <h3 className={styles.heading}>
+          We Provide More Details — Let Us Know What Help You Need
+        </h3>
+        <p className={styles.description}>
+          Technology is a broad category encompassing information technology and
+          the application of tech solutions. Let's build your digital future together.
+        </p>
+        <Link to="/contact" className={styles.contactButton}>Contact Us</Link>
       </div>
-      <div className={styles.buttonDiv}>
-        <button>CONTACT US</button>
-      </div>
-    </div>
+    </section>
   );
 };
 

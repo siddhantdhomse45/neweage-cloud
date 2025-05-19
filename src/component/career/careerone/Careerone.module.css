@@ -1,85 +1,239 @@
-.careerOneMain {
-  padding: 20px 180px;
-  text-align: center;
+.container {
+  padding: 0 180px;
+  font-family: Arial, sans-serif;
   background-color: #f9f9f9;
-}
-
-.header h2 {
-  font-size: 2rem;
-  color: #333;
+  min-height: 100vh;
+  margin-top: 30px;
   margin-bottom: 30px;
+  animation: fadeInUp 0.8s ease forwards;
 }
 
-
-.programsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 30px;
-}
-
-.program {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 320px;
+.title {
   text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  animation: slideDown 0.8s ease;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.jobCard {
+  border: 1px solid #e6e6e6;
   padding: 20px;
-  transition: transform 0.3s ease-in-out;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transform: translateY(30px);
+  opacity: 0;
+  animation: cardFadeIn 0.6s ease forwards;
 }
 
-.program:hover {
-  transform: scale(1.05);
+.jobCard:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.jobCard:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.jobCard:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.jobCard:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.jobCard:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.jobCard:nth-child(6) {
+  animation-delay: 0.6s;
 }
 
-
-.imageContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.imageContainer img {
-  width: 80px;
-  height: auto;
-}
-
-
-.textContainer h2 {
-  font-size: 1.5rem;
-  color: #d63333;
+.cardTitle {
+  color: #f4600c;
+  font-weight: bold;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
-.textContainer p {
-  font-size: 1rem;
-  color: #555;
+.description {
+  margin-bottom: 15px;
+  color: #444;
   line-height: 1.5;
+  text-align: justify;
 }
 
+.label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+  text-align: left;
+}
 
-@media (max-width: 768px) {
-  .careerOneMain {
-    padding: 20px;
+.buttonGroup {
+  display: flex;
+  gap: 120px;
+  margin-top: 15px;
+}
+
+.button {
+  padding: 8px 16px;
+  border: 1px solid #f4600c;
+  background-color: white;
+  color: #f4600c;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #f4600c;
+  color: white;
+  transform: scale(1.05);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.4s ease;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: calc(100% - 360px);
+  max-width: 800px;
+  overflow-y: auto;
+  animation: zoomIn 0.3s ease;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+h2, h3 {
+  margin-top: 20px;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+ol li {
+  margin-bottom: 10px;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.formGroup label {
+  font-weight: bold;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.formGroup textarea {
+  resize: vertical;
+}
+
+.closeButton {
+  background-color: #f4600c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.closeButton:hover {
+  background-color: #e04b08;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
   }
-
-  .program {
-    width: 100%;
-    max-width: 320px;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
+}
 
-  .imageContainer img {
-    width: 70px;
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
   }
-
-  .textContainer h2 {
-    font-size: 1.2rem;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
+}
 
-  .textContainer p {
-    font-size: 0.9rem;
+@keyframes cardFadeIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }

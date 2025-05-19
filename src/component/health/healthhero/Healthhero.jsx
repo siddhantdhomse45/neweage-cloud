@@ -8,7 +8,7 @@ const Healthhero = () => {
         <h1>
         Transforming Healthcare, Empowering Lives
         </h1>
-        <p>RPBS is dedicated to revolutionizing the healthcare landscape by providing innovative IT solutions tailored to meet the evolving needs of the industry. From electronic health record systems to telemedicine platforms, we empower healthcare providers to deliver exceptional care through seamless digital experiences. Our HIPAA-compliant solutions prioritize patient privacy and security while enhancing access to care and driving patient satisfaction. With RPBS, healthcare organizations can embrace the future of healthcare delivery with confidence.</p>
+        <p>Neweage Cloud is dedicated to revolutionizing the healthcare landscape by providing innovative IT solutions tailored to meet the evolving needs of the industry. From electronic health record systems to telemedicine platforms, we empower healthcare providers to deliver exceptional care through seamless digital experiences. Our HIPAA-compliant solutions prioritize patient privacy and security while enhancing access to care and driving patient satisfaction. With RPBS, healthcare organizations can embrace the future of healthcare delivery with confidence.</p>
       </div>
     </div>
   )

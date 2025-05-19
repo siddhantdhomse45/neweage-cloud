@@ -1,35 +1,30 @@
 .sectionMain {
-  padding: 20px 180px;
-  background-color: #10e18a;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  text-align: center;
+  background: linear-gradient(135deg, #10e18a, #0cb56f);
+  padding: 50px 120px;
   opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+  border-radius: 16px;
 }
 
-/* Trigger animation when visible */
 .visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Progress Circle */
-.percentageDiv {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 20px;
+.circleWrapper {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 120px;
+  height: 120px;
+  margin-right: 50px;
 }
 
 .progressCircle {
   transform: rotate(-90deg);
-  position: absolute;
 }
 
 .backgroundCircle {
@@ -43,84 +38,83 @@
   stroke: #ffffff;
   stroke-width: 10;
   stroke-linecap: round;
-  transition: stroke-dashoffset 1.5s ease-in-out;
+  transition: stroke-dashoffset 1s ease-in-out;
 }
 
-.percentageDivinner {
+.percentageText {
   position: absolute;
-  font-size: 18px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 20px;
   font-weight: bold;
-  color: #ffffff;
 }
 
-/* Text & Button Styling */
-.detailsDiv {
+.contentWrapper {
+  max-width: 600px;
   color: #ffffff;
-  text-align: start;
-  margin-bottom: 20px;
+  text-align: left;
 }
 
-.headingDiv {
-  border-left: 2px solid white;
+.heading {
+  font-size: 28px;
+  margin-bottom: 16px;
+  border-left: 4px solid #fff;
   padding-left: 12px;
-  margin-bottom: 10px;
 }
 
-.paragraphDiv p {
-  color: rgb(255, 255, 255);
-  font-size: 14px;
-  margin: 0 10px;
-}
-
-.buttonDiv button {
-  padding: 8px 13px;
-  width: 100%;
-  max-width: 350px;
-  height: 40px;
+.description {
   font-size: 16px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease-in-out;
+  line-height: 1.6;
+  margin-bottom: 24px;
 }
 
-.buttonDiv button:hover {
+.contactButton {
+  background-color: #ffffff;
+  color: #000;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 200px;
+}
+
+.contactButton:hover {
   background-color: #000000;
   color: #ffffff;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
+/* Responsive */
+@media (max-width: 768px) {
   .sectionMain {
-    padding: 20px 40px;
     flex-direction: column;
+    padding: 30px 20px;
     text-align: center;
   }
 
-  .percentageDiv {
-    width: 90px;
-    height: 90px;
-    margin-bottom: 15px;
+  .circleWrapper {
+    margin: 0 0 20px 0;
   }
 
-  .percentageDivinner {
-    font-size: 16px;
-  }
-
-  .detailsDiv {
+  .contentWrapper {
     text-align: center;
-    margin-bottom: 15px;
   }
 
-  .headingDiv {
-    padding-left: 8px;
+  .heading {
+    font-size: 22px;
+    padding-left: 0;
+    border-left: none;
   }
 
-  .paragraphDiv p {
-    font-size: 12px;
-    margin: 0 5px;
-  }
-
-  .buttonDiv button {
-    padding: 10px 15px;
+  .description {
     font-size: 14px;
+  }
+
+  .contactButton {
+    width: 100%;
+    max-width: 280px;
   }
 }

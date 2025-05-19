@@ -26,7 +26,7 @@ const Navbar = () => {
           <li><Link to="/aboutus">About Us</Link></li>
           <li><Link to="/career">Career</Link></li>
           <li><Link to="/health">US Health Care</Link></li>
-          <li><Link to="/admin">Admin Login</Link></li>
+          {/* <li><Link to="/admin">Admin Login</Link></li> */}
           <li className={styles.button}><Link to="/contact">Contact Now</Link></li>
         </ul>
       </div>

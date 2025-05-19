@@ -10,7 +10,10 @@ const Footer = () => {
           <div className={styles.rpsolutionlogo}>
             <div>
               <Link to="/">
-                <img src="https://neweageclouds.com/NeweageLogo.png" alt="img" />
+                <img
+                  src="https://neweageclouds.com/NeweageLogo.png"
+                  alt="img"
+                />
               </Link>
             </div>
             <h1>Neweage Cloud Software Service Pvt Ltd.</h1>
@@ -28,14 +31,12 @@ const Footer = () => {
             Ganesham Commercial -A, Survey No. <br />
             21/18-21/24, BRTS Road, Pimple <br />
             Saudagar, Pune- 411027 <br />
-            
           </p>
           <p>
-            <h4>Contact:</h4>+919112100662
+            <h4>Contact:</h4>+91 9112100662
           </p>
           <p>
-            <h4>Email Us:</h4> hr@neweageclouds.com,
-            hr@neweageclouds.com
+            <h4>Email Us:</h4> hr@neweageclouds.com
           </p>
         </div>
       </div>

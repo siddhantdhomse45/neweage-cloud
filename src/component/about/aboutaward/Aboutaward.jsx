@@ -13,7 +13,7 @@ const Aboutaward = () => {
           <img src={completed} alt="logo" />
         </div>
         <div className={styles.textWrapper}>
-          <h3>426K+</h3>
+          <h3>26+</h3>
           <p>Completed Projects</p>
         </div>
       </div>
@@ -23,7 +23,7 @@ const Aboutaward = () => {
           <img src={happyclient} alt="logo" />
         </div>
         <div className={styles.textWrapper}>
-          <h3>1425+</h3>
+          <h3>42+</h3>
           <p>Happy Clients</p>
         </div>
       </div>
@@ -33,7 +33,7 @@ const Aboutaward = () => {
           <img src={partner} alt="logo" />
         </div>
         <div className={styles.textWrapper}>
-          <h3>750+</h3>
+          <h3>50+</h3>
           <p>Business Partners</p>
         </div>
       </div>
@@ -43,7 +43,7 @@ const Aboutaward = () => {
           <img src={trophy} alt="logo" />
         </div>
         <div className={styles.textWrapper}>
-          <h3>884K+</h3>
+          <h3>84+</h3>
           <p>Award Wins</p>
         </div>
       </div>

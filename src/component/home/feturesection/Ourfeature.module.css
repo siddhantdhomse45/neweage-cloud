@@ -113,148 +113,125 @@
   }
    */
 
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-   @keyframes appear {
-    from {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
+.ourMainSection {
+  text-align: center;
+  padding: 60px 100px;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  animation: appear 1s ease-in-out;
+}
+
+.headerSection {
+  margin-bottom: 50px;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #e24c4b;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #121212;
+  line-height: 1.3;
+}
+
+.featuresSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.featureItem {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  width: 250px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featureItem:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.featureItem::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/assets/Callmailimg.jpg') center/cover no-repeat;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  z-index: 1;
+}
+
+.featureItem:hover::after {
+  opacity: 0.08;
+}
+
+.featureItem img,
+.featureItem h4 {
+  position: relative;
+  z-index: 2;
+}
+
+.featureItem img {
+  width: 80px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.featureItem:hover img {
+  transform: scale(1.05);
+}
+
+.featureItem h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f1f1f;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.featureItem:hover h4 {
+  color: #df2a16;
+}
+
+@media screen and (max-width: 1024px) {
   .ourMainSection {
-    text-align: center;
-    padding: 40px 120px;
-    background-color: #ffffff;
+    padding: 50px 40px;
   }
-  
-  .headerSection h6 {
-    font-size: 22px;
-    color: #df2a16;
-    margin-bottom: 8px;
+  .title {
+    font-size: 30px;
   }
-  
-  .headerSection h2 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #000000;
-    margin-bottom: 40px;
-  }
-  
+}
+
+@media screen and (max-width: 768px) {
   .featuresSection {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    animation: appear 1s ease-in-out;
+    flex-direction: column;
+    align-items: center;
   }
-  
   .featureItem {
-    flex: 1 1 calc(25% - 20px);
-    min-width: 220px;
-    max-width: 260px;
-    background-color: #f7f8fc;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #e0e0e0;
-    text-align: center;
-    transition: all 0.4s ease-in-out;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
+    width: 100%;
+    max-width: 360px;
   }
-  
-  /* ✅ Add the background image on hover */
-  .featureItem:hover::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url('/assets/Callmailimg.jpg'); /* ✅ Make sure the image is inside the public folder */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 1;
-    opacity: 1;
-    transition: opacity 0.4s ease-in-out;
-  }
-  
-  /* ✅ Slight overlay to darken the background */
-  .featureItem:hover::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 2;
-    opacity: 1;
-    transition: opacity 0.4s ease-in-out;
-  }
-  
-  /* ✅ Keep image and text above background */
-  .featureItem img,
-  .featureItem h4 {
-    position: relative;
-    z-index: 3;
-  }
-  
-  .featureItem img {
-    width: 90px;
-    height: auto;
-    margin-bottom: 15px;
-  }
-  
-  .featureItem h4 {
-    font-size: 20px;
-    font-weight: 600;
-    color: #000000;
-    line-height: 1.4;
-    transition: color 0.3s;
-  }
-  
-  .featureItem:hover h4 {
-    color: #e33333;
-  }
-  
-  @media screen and (max-width: 1024px) {
-    .ourMainSection {
-      padding: 40px 60px;
-    }
-  
-    .featuresSection {
-      justify-content: center;
-    }
-  
-    .featureItem {
-      flex: 1 1 45%;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .ourMainSection {
-      padding: 30px 20px;
-    }
-  
-    .headerSection h2 {
-      font-size: 24px;
-    }
-  
-    .headerSection h6 {
-      font-size: 18px;
-    }
-  
-    .featureItem {
-      flex: 1 1 90%;
-    }
-  
-    .featureItem img {
-      width: 70px;
-    }
-  
-    .featureItem h4 {
-      font-size: 18px;
-    }
-  }
-  
+}

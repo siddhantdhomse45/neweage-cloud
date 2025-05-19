@@ -7,7 +7,7 @@ import Servicespage from './pages/Servicespage';
 import Aboutpage from './pages/Aboutpage';
 import Careerpage from './pages/Careerpage';
 import Healthpage from './pages/Healthpage';
-import Adminpage from './pages/Adminpage';
+// import Adminpage from './pages/Adminpage';
 import Contactpage from './pages/Contactpage';
 import CustomCursor from './customCursor/CustomCursor';
 
@@ -26,7 +26,7 @@ function App() {
         <Route path='/aboutus' element={<Aboutpage/>}/>
         <Route path='/career' element={<Careerpage/>}/>
         <Route path='/health' element={<Healthpage/>}/>
-        <Route path='/admin' element={<Adminpage/>}/>
+        {/* <Route path='/admin' element={<Adminpage/>}/> */}
         <Route path='/contact' element={<Contactpage/>}/>
       </Routes>
     </BrowserRouter>

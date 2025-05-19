@@ -31,7 +31,7 @@ const Contact = () => {
         <div className={styles.contactForm}>
           <h3>Get free Business touch Customers me.</h3>
           <p>
-            RP Solutions design, management & support services business agency
+            Neweage Cloud design, management & support services business agency
             elit, sed do eiusmod tempor.
           </p>
           <form onSubmit={onSubmit}>
@@ -63,25 +63,25 @@ const Contact = () => {
         <div className={styles.contactInfo}>
           <h3>Contact Information:</h3>
           <p>
-            RP Solutions design, management & support business agency elit, sed
+            Neweage Cloud design, management & support business agency elit, sed
             do eiusmod tempor.
           </p>
           <ul>
             <li>
               <strong>Call This Now:</strong> <br />
-              +918975172394
+              +919112100662
             </li>
             <li>
               <strong>Your Message:</strong> <br />
-              hr@rpsolution.com
+              hr@neweageclouds.com
             </li>
             <li>
               <strong>Your Location:</strong> <br />
-              401/402 4th Floor, <br />
-              Sai Villa Commercial Appartment,
-              <br /> Sr No 166, Alwadi Road <br />
-              Opps. To Sahyadri Hospital
-              <br /> Hadpasar, pune - 411028
+              ​​Office No. 4-C,Second Floor, <br />
+              Ganesham Commercial -A, Survey No.
+              <br /> 21/18-21/24, BRTS Road, Pimple
+              Saudagar, Pune- 411027
+             
             </li>
           </ul>
           <div className={styles.socialLinks}>

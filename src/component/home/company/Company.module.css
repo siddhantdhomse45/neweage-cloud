@@ -1,109 +1,138 @@
 .companymain {
   display: flex;
   flex-direction: column;
-  padding: 20px 180px;
+  padding: 0 200px;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 30px;
 }
 
 .headerContainer {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .headerContainer h5 {
-  font-size: 1.2rem;
-  margin: 10px 0px;
-  color: #d63333;
+  font-size: 1.1rem;
+  color: #df2a16;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
 }
 
 .headerContainer h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin: 10px 0;
-}
-
-.imageContainer {
-  flex: 1;
-}
-
-.imageContainer img {
-  width: 21rem;
-  border-radius: 4rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
 }
 
 .contentContainer {
   display: flex;
-  flex-direction: row;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .leftContainer,
 .rightContainer {
-  display: flex;
-  align-items: center;
   flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .solutionContainer {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 30px;
+  width: 100%;
+  max-width: 300px;
 }
 
 .solutionItem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  background-color: #fff;
+  border-radius: 12px;
   padding: 20px;
-  border: 1px solid black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.solutionItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .soltuion1 {
-  align-items: center;
-  width: 100%;
   display: flex;
+  align-items: center;
   gap: 15px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
+
 .soltuion1 img {
   width: 50px;
   height: 50px;
+  object-fit: contain;
 }
 
-.mainImage {
-  width: 100%;
-  height: auto;
+.soltuion1 h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
 }
 
+.solutionItem p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer img {
+  width: 300px;
+  border-radius: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
 @media screen and (max-width: 768px) {
   .companymain {
-    padding: 20px 40px;
-  }
-
-  .contentContainer {
-    flex-direction: column; 
-    align-items: center;
+    padding: 40px 20px;
   }
 
   .headerContainer h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .imageContainer img {
-    width: 18rem; 
+    width: 250px;
   }
 
   .solutionContainer {
-    gap: 30px; 
-  }
-
-  .soltuion1 img {
-    width: 40px; 
+    max-width: 100%;
+    gap: 20px;
   }
 
   .solutionItem {
-    width: 90%; 
-    margin-bottom: 10px; 
+    width: 100%;
+  }
+
+  .soltuion1 img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .soltuion1 h4 {
+    font-size: 1rem;
+  }
+
+  .solutionItem p {
+    font-size: 0.9rem;
   }
 }

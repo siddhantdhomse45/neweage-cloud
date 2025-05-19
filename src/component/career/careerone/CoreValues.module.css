@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 100px 100px;
+  gap: 40px;
+  background-color: #fff;
+  margin: 0 100px;
+}
+
+.content {
+  max-width: 60%;
+}
+
+.title {
+  color: #4b0055;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 18px;
+  color: #222;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 16px 40px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: #4b4b4b;
+  font-size: 16px;
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.imageWrapper {
+  flex-shrink: 0;
+  width: 450px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}

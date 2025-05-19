@@ -31,77 +31,49 @@ const Moresec = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className={styles.moremain}>
+    <section ref={sectionRef} className={styles.moremain}>
       <div className={`${styles.imageContainer} ${isVisible ? styles.leftVisible : ""}`}>
-        <img src={more1} alt="img" />
+        <img src={more1} alt="Main Visual" />
       </div>
       <div className={`${styles.contentContainer} ${isVisible ? styles.rightVisible : ""}`}>
         <div className={styles.headerContainer77}>
           <h5>OUR CHOOSE MORE</h5>
           <h2>
-            We Preparing For Your Success
+            Preparing For Your Success
             <br /> Choose Best Solutions.
           </h2>
           <p>
-          Neweage Cloud , management & support services Business
-            business agency e lit, sed do eiusmod tempor majority have in some
-            we form, by injected humour solution.
+            Neweage Cloud, management & support services for business success.
+            We bring humor, precision, and tailored strategies to drive results.
           </p>
         </div>
         <div className={styles.solutionsContainer22}>
-          <div className={styles.solution}>
-            <div className={styles.solutionImageContainer1}>
-              <img src={moresec1} alt="img" />
+          {[{ img: moresec1, title: "Technological Solutions" }, { img: moresec2, title: "Financial Management" }, { img: moresec3, title: "Product Development" }].map((item, index) => (
+            <div className={styles.solution} key={index}>
+              <div className={styles.solutionImageContainer1}>
+                <img src={item.img} alt={item.title} />
+              </div>
+              <div className={styles.solutionTextContainer}>
+                <h5>{item.title}</h5>
+              </div>
             </div>
-            <div className={styles.solutionTextContainer}>
-              <h5>
-                Technological <br />
-                Solutions
-              </h5>
-            </div>
-          </div>
-          <div className={styles.solution}>
-            <div className={styles.solutionImageContainer1}>
-              <img src={moresec2} alt="img" />
-            </div>
-            <div className={styles.solutionTextContainer}>
-              <h5>
-                Financial <br />
-                Management
-              </h5>
-            </div>
-          </div>
-          <div className={styles.solution}>
-            <div className={styles.solutionImageContainer1}>
-              <img src={moresec3} alt="img" />
-            </div>
-            <div className={styles.solutionTextContainer}>
-              <h5>
-                Product <br />
-                Development
-              </h5>
-            </div>
-          </div>
+          ))}
         </div>
         <div className={styles.featuresListContainer0}>
-          <div className={styles.featuresListContainer11}>
-            <ul>
-              <li>Team Support</li>
-              <li>Business Management</li>
-            </ul>
-          </div>
-          <div className={styles.featuresListContainer11}>
-            <ul>
-              <li>Business tailored</li>
-              <li>Consultancy</li>
-            </ul>
-          </div>
+          <ul className={styles.featuresListContainer11}>
+            <li>Team Support</li>
+            <li>Business Management</li>
+          </ul>
+          <ul className={styles.featuresListContainer11}>
+            <li>Business Tailored</li>
+            <li>Consultancy</li>
+          </ul>
         </div>
         <div className={styles.buttonContainer1}>
           <button>READ MORE</button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
