@@ -1,52 +1,45 @@
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
+import CountUp from 'react-countup';
+
 import completed from '/src/assets/completed.png';
 import happyclient from '/src/assets/happyclient.png';
 import partner from '/src/assets/partner.png';
 import trophy from '/src/assets/trophy.png';
+
 import styles from './Aboutaward.module.css';
 
 const Aboutaward = () => {
+  const awards = [
+    { img: completed, count: 26, label: 'Completed Projects' },
+    { img: happyclient, count: 42, label: 'Happy Clients' },
+    { img: partner, count: 50, label: 'Business Partners' },
+    { img: trophy, count: 84, label: 'Award Wins' }
+  ];
+
   return (
     <div className={styles.Aboutawardmain}>
-      <div className={styles.card1}>
-        <div className={styles.imageWrapper}>
-          <img src={completed} alt="logo" />
-        </div>
-        <div className={styles.textWrapper}>
-          <h3>26+</h3>
-          <p>Completed Projects</p>
-        </div>
-      </div>
+      {awards.map((award, index) => {
+        const { ref, inView } = useInView({ triggerOnce: true });
 
-      <div className={styles.card1}>
-        <div className={styles.imageWrapper}>
-          <img src={happyclient} alt="logo" />
-        </div>
-        <div className={styles.textWrapper}>
-          <h3>42+</h3>
-          <p>Happy Clients</p>
-        </div>
-      </div>
-
-      <div className={styles.card1}>
-        <div className={styles.imageWrapper}>
-          <img src={partner} alt="logo" />
-        </div>
-        <div className={styles.textWrapper}>
-          <h3>50+</h3>
-          <p>Business Partners</p>
-        </div>
-      </div>
-
-      <div className={styles.card1}>
-        <div className={styles.imageWrapper}>
-          <img src={trophy} alt="logo" />
-        </div>
-        <div className={styles.textWrapper}>
-          <h3>84+</h3>
-          <p>Award Wins</p>
-        </div>
-      </div>
+        return (
+          <div className={styles.card1} key={index} ref={ref}>
+            <div className={styles.imageWrapper}>
+              <img src={award.img} alt={award.label} />
+            </div>
+            <div className={styles.textWrapper}>
+              <h3>
+                {inView ? (
+                  <CountUp start={0} end={award.count} duration={2} suffix="+" />
+                ) : (
+                  '0+'
+                )}
+              </h3>
+              <p>{award.label}</p>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 };

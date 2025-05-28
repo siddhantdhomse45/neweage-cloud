@@ -7,7 +7,7 @@
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 15px;
 }
@@ -15,7 +15,7 @@
 .description {
   max-width: 1000px;
   margin: 0 auto 40px;
-  font-size: 1rem;
+  font-size: 14px;
   line-height: 1.6;
   color: #555;
   text-align: justify;
@@ -55,13 +55,13 @@
 }
 
 .valueBox h3 {
-  font-size: 1.4rem;
+  font-size: 18px;
   color: #333;
   margin-bottom: 10px;
 }
 
 .valueBox p {
-  font-size: 1rem;
+  font-size: 14px;
   color: #666;
   line-height: 1.6;
 }

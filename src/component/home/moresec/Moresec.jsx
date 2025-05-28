@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { FiCheckCircle, FiArrowRight } from "react-icons/fi";
 import more1 from "/src/assets/more1.jpg";
 import moresec1 from "/src/assets/moresec1.png";
 import moresec2 from "/src/assets/moresec2.png";
@@ -16,7 +17,7 @@ const Moresec = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
 
     if (sectionRef.current) {
@@ -30,48 +31,69 @@ const Moresec = () => {
     };
   }, []);
 
+  const solutions = [
+    { img: moresec1, title: "Technological Solutions" },
+    { img: moresec2, title: "Financial Management" },
+    { img: moresec3, title: "Product Development" }
+  ];
+
+  const featuresLeft = ["Team Support", "Business Management"];
+  const featuresRight = ["Business Tailored", "Consultancy"];
+
   return (
     <section ref={sectionRef} className={styles.moremain}>
       <div className={`${styles.imageContainer} ${isVisible ? styles.leftVisible : ""}`}>
-        <img src={more1} alt="Main Visual" />
+        <div className={styles.imageWrapper}>
+          <img src={more1} alt="Business Solutions" className={styles.mainImage} />
+          <div className={styles.imageOverlay}></div>
+        </div>
       </div>
+      
       <div className={`${styles.contentContainer} ${isVisible ? styles.rightVisible : ""}`}>
-        <div className={styles.headerContainer77}>
-          <h5>OUR CHOOSE MORE</h5>
-          <h2>
-            Preparing For Your Success
-            <br /> Choose Best Solutions.
+        <div className={styles.headerContainer}>
+          <span className={styles.sectionTag}>WHY CHOOSE US</span>
+          <h2 className={styles.sectionTitle}>
+            Preparing For Your Success With <span className={styles.highlight}>Optimal</span> Solutions
           </h2>
-          <p>
-            Neweage Cloud, management & support services for business success.
-            We bring humor, precision, and tailored strategies to drive results.
+          <p className={styles.sectionDescription}>
+            Newage Cloud provides comprehensive management & support services for business success. 
+            We combine expertise with tailored strategies to deliver exceptional results.
           </p>
         </div>
-        <div className={styles.solutionsContainer22}>
-          {[{ img: moresec1, title: "Technological Solutions" }, { img: moresec2, title: "Financial Management" }, { img: moresec3, title: "Product Development" }].map((item, index) => (
-            <div className={styles.solution} key={index}>
-              <div className={styles.solutionImageContainer1}>
+
+        <div className={styles.solutionsGrid}>
+          {solutions.map((item, index) => (
+            <div className={`${styles.solutionCard} ${isVisible ? styles.cardVisible : ""}`} key={index}>
+              <div className={styles.solutionIcon}>
                 <img src={item.img} alt={item.title} />
               </div>
-              <div className={styles.solutionTextContainer}>
-                <h5>{item.title}</h5>
-              </div>
+              <h3 className={styles.solutionTitle}>{item.title}</h3>
             </div>
           ))}
         </div>
-        <div className={styles.featuresListContainer0}>
-          <ul className={styles.featuresListContainer11}>
-            <li>Team Support</li>
-            <li>Business Management</li>
+
+        <div className={styles.featuresContainer}>
+          <ul className={styles.featuresList}>
+            {featuresLeft.map((feature, index) => (
+              <li key={index} className={styles.featureItem}>
+                <FiCheckCircle className={styles.checkIcon} />
+                {feature}
+              </li>
+            ))}
           </ul>
-          <ul className={styles.featuresListContainer11}>
-            <li>Business Tailored</li>
-            <li>Consultancy</li>
+          <ul className={styles.featuresList}>
+            {featuresRight.map((feature, index) => (
+              <li key={index} className={styles.featureItem}>
+                <FiCheckCircle className={styles.checkIcon} />
+                {feature}
+              </li>
+            ))}
           </ul>
         </div>
-        <div className={styles.buttonContainer1}>
-          <button>READ MORE</button>
-        </div>
+
+        <button className={styles.ctaButton}>
+          Explore More <FiArrowRight className={styles.arrowIcon} />
+        </button>
       </div>
     </section>
   );

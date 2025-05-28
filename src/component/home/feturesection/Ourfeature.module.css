@@ -1,237 +1,244 @@
-/* @keyframes appear{
-  from{
+/* Ourfeature.module.css */
+
+/* Keyframes for flip animation */
+@keyframes flipIn {
+  0% {
+    transform: perspective(600px) rotateY(90deg);
     opacity: 0;
-    scale: 0.5;
   }
-  to{
-  opacity: 1;
-  scale: 1;
-  }
-}
-
-.featuresSection{
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 20%;
-}
-
-
-.ourMainSection {
-    text-align: center; 
-    padding: 20px 180px;
-  }
-  
-  .headerSection h6 {
-    text-align: center;   
-    font-size: 24px;
-    color: #df2a16;
-    margin-bottom: 10px;
-  }
-  
-  .headerSection h2 {
-    text-align: center;   
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #000000;
-  }
-  
-  .featuresSection {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .featureItem {
-    width: 20%;
-    margin-bottom: 20px;
-    text-align: center;
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: #f7f8fc;
-  }
-  .featureItem:hover{
-    background-image: url(../../../assets/Callmailimg.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-
-  .featureItem:hover h4{
-    color: #e33333;
-  }
-
-
-  .featureItem img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  .featureItem h4 {
-    font-size: 24px;
-    color: #000000;
-  }
-  
-  @media screen and (max-width: 768px) {
-   
-
-    .ourMainSection {
-      padding: 20px 40px;
-    }
-  
-    .headerSection h6 {
-      font-size: 20px;
-    }
-  
-    .headerSection h2 {
-      font-size: 24px; 
-      margin-bottom: 20px; 
-    }
-  
-    .featuresSection {
-      flex-direction: column; 
-      align-items: center; 
-    }
-  
-    .featureItem {
-      width: 80%; 
-      margin-bottom: 20px;
-      padding: 15px;
-    }
-  
-    .featureItem img {
-      width: 80px;
-    }
-  
-    .featureItem h4 {
-      font-size: 20px;
-    }
-  }
-   */
-
-@keyframes appear {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
+  100% {
+    transform: perspective(600px) rotateY(0deg);
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
+/* Main section styles */
 .ourMainSection {
   text-align: center;
-  padding: 60px 100px;
-  background: linear-gradient(135deg, #fdfbfb, #ebedee);
-  animation: appear 1s ease-in-out;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  overflow: hidden;
 }
 
+/* Header section styles */
 .headerSection {
-  margin-bottom: 50px;
+  margin-bottom: 70px;
+  animation: fadeInUp 0.8s ease-out both;
 }
 
 .subtitle {
-  font-size: 20px;
-  color: #e24c4b;
+  display: inline-block;
+  font-size: 14px;
+  color: #38ef20;
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.subtitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #38ef20, transparent);
 }
 
 .title {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 800;
   color: #121212;
-  line-height: 1.3;
+  line-height: 1.2;
+  margin: 0;
+  background: linear-gradient(to right, #2c3e50, #38ef20);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .featuresSection {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px; /* Increased gap for better spacing during flip */
+  max-width: 1200px;
+  margin: 0 auto;
+  perspective: 1000px;
 }
 
-.featureItem {
-  background: #fff;
-  border-radius: 16px;
-  padding: 30px 20px;
-  width: 250px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+/* Card container */
+.featureCard {
+  background: transparent;
+  border-radius: 20px;
+  height: 280px; /* Slightly increased height */
+  perspective: 1000px;
+  transform-style: preserve-3d; /* Added for better 3D space */
   position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 10px; /* Additional margin for flip space */
 }
 
-.featureItem:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+/* Inner card container for flip effect */
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1); /* Smoother transition */
+  transform-style: preserve-3d;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  backface-visibility: hidden; /* Prevent flickering */
 }
 
-.featureItem::after {
-  content: '';
+.featureCard:hover .cardInner {
+  transform: rotateY(180deg);
+}
+
+/* Front and back of card */
+.cardFront, .cardBack {
   position: absolute;
-  inset: 0;
-  background: url('/assets/Callmailimg.jpg') center/cover no-repeat;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
-  z-index: 1;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  padding: 35px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
-.featureItem:hover::after {
-  opacity: 0.08;
+/* Front card styling */
+.cardFront {
+  background: #fff;
+  color: #2c3e50;
+  transform: rotateY(0deg);
+  z-index: 2; /* Ensure front appears above back initially */
 }
 
-.featureItem img,
-.featureItem h4 {
-  position: relative;
-  z-index: 2;
+.cardFront .iconWrapper img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 25px;
+  transition: all 0.5s ease;
 }
 
-.featureItem img {
-  width: 80px;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease;
-}
-
-.featureItem:hover img {
-  transform: scale(1.05);
-}
-
-.featureItem h4 {
-  font-size: 18px;
-  font-weight: 600;
-  color: #1f1f1f;
+.cardFront h4 {
+  font-size: 22px;
+  font-weight: 700;
   margin: 0;
-  transition: color 0.3s ease;
+  text-align: center;
+  line-height: 1.4;
 }
 
-.featureItem:hover h4 {
-  color: #df2a16;
+/* Back card styling */
+.cardBack {
+  background: linear-gradient(135deg, #38ef20, #11998e);
+  color: white;
+  transform: rotateY(180deg);
+  padding: 30px;
 }
 
-@media screen and (max-width: 1024px) {
+.cardBack p {
+  font-size: 17px;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0;
+}
+
+/* Spacing adjustments for flip effect */
+.featureCard:hover {
+  z-index: 10; /* Bring hovered card to front */
+  transform: translateZ(50px); /* Lift card slightly during flip */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
   .ourMainSection {
-    padding: 50px 40px;
+    padding: 80px 40px;
   }
+  .featuresSection {
+    gap: 35px;
+  }
+}
+
+@media screen and (max-width: 992px) {
   .title {
-    font-size: 30px;
+    font-size: 36px;
+  }
+  
+  .featuresSection {
+    gap: 30px;
+  }
+  
+  .featureCard {
+    height: 260px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .featuresSection {
-    flex-direction: column;
-    align-items: center;
+  .ourMainSection {
+    padding: 60px 30px;
   }
-  .featureItem {
-    width: 100%;
-    max-width: 360px;
+  
+  .title {
+    font-size: 32px;
+  }
+  
+  .featuresSection {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+  
+  .featureCard {
+    margin: 0 5px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .ourMainSection {
+    padding: 50px 20px;
+  }
+  
+  .headerSection {
+    margin-bottom: 50px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+  }
+  
+  .title {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+  
+  .featuresSection {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    gap: 30px;
+  }
+  
+  .featureCard {
+    height: 240px;
+    margin: 0;
+  }
+  
+  .cardFront .iconWrapper img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .cardFront h4 {
+    font-size: 20px;
+  }
+  
+  .cardBack p {
+    font-size: 16px;
   }
 }

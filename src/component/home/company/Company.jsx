@@ -7,6 +7,17 @@ import Company3 from "/src/assets/Company3.png";
 import Company4 from "/src/assets/Company4.png";
 import styles from "./Company.module.css";
 
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      when: "beforeChildren",
+    },
+  },
+};
+
 const fadeDown = {
   hidden: { opacity: 0, y: -50 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -27,9 +38,43 @@ const zoomIn = {
   visible: { opacity: 1, scale: 1, transition: { duration: 0.7 } },
 };
 
+const cardHover = {
+  hover: {
+    y: -10,
+    boxShadow: "0 15px 30px rgba(0,0,0,0.12)",
+    transition: { duration: 0.3 }
+  }
+};
+
 const Company = () => {
+  const solutionsLeft = [
+    {
+      img: Company1,
+      title: "Digital Marketing",
+      description: "Comprehensive digital strategies to grow your online presence and reach your target audience effectively."
+    },
+    {
+      img: Company2,
+      title: "Data Management",
+      description: "Secure and efficient data handling solutions tailored to your business needs."
+    }
+  ];
+
+  const solutionsRight = [
+    {
+      img: Company3,
+      title: "Human Resources",
+      description: "Empowering your organization with expert HR solutions—streamlining recruitment, enhancing employee engagement, and building a people-first culture."
+    },
+    {
+      img: Company4,
+      title: "App Development",
+      description: "Custom mobile and web applications designed to solve your unique business challenges."
+    }
+  ];
+
   return (
-    <div className={styles.companymain}>
+    <section className={styles.companymain}>
       <motion.div
         className={styles.headerContainer}
         variants={fadeDown}
@@ -37,11 +82,21 @@ const Company = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
       >
-        <h5>OUR COMPANY SOLUTION</h5>
-        <h2>Technology Of Our Apps Solution</h2>
+        <span className={styles.subtitle}>OUR COMPANY SOLUTION</span>
+        <h2 className={styles.title}>Innovative Technology Solutions</h2>
+        <p className={styles.headerText}>
+          We deliver cutting-edge solutions tailored to your business needs, 
+          helping you stay ahead in the digital landscape.
+        </p>
       </motion.div>
 
-      <div className={styles.contentContainer}>
+      <motion.div 
+        className={styles.contentContainer}
+        variants={fadeIn}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         {/* Left Section */}
         <motion.div
           className={styles.leftContainer}
@@ -51,17 +106,21 @@ const Company = () => {
           viewport={{ once: true, amount: 0.4 }}
         >
           <div className={styles.solutionContainer}>
-            {[{ img: Company1, title: "Digital Marketing" }, { img: Company2, title: "Data Management" }].map((item, i) => (
+            {solutionsLeft.map((item, i) => (
               <motion.div
                 className={styles.solutionItem}
                 key={i}
-                whileHover={{ scale: 1.05 }}
+                variants={cardHover}
+                whileHover="hover"
               >
-                <div className={styles.soltuion1}>
-                  <img src={item.img} alt="logo" className={styles.logo} />
+                <div className={styles.solutionHeader}>
+                  <div className={styles.iconWrapper}>
+                    <img src={item.img} alt={item.title} className={styles.logo} />
+                  </div>
                   <h4>{item.title}</h4>
                 </div>
-                <p>Solution the we create this company for service business solution</p>
+                <p>{item.description}</p>
+                <a href="#" className={styles.learnMore}>Learn more →</a>
               </motion.div>
             ))}
           </div>
@@ -75,7 +134,10 @@ const Company = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
         >
-          <img src={companyimg} alt="img" />
+          <div className={styles.imageWrapper}>
+            <img src={companyimg} alt="Technology solutions" className={styles.centerImage} />
+            <div className={styles.imageOverlay}></div>
+          </div>
         </motion.div>
 
         {/* Right Section */}
@@ -87,23 +149,27 @@ const Company = () => {
           viewport={{ once: true, amount: 0.4 }}
         >
           <div className={styles.solutionContainer}>
-            {[{ img: Company3, title: "Great Speaker" }, { img: Company4, title: "App Development" }].map((item, i) => (
+            {solutionsRight.map((item, i) => (
               <motion.div
                 className={styles.solutionItem}
                 key={i}
-                whileHover={{ scale: 1.05 }}
+                variants={cardHover}
+                whileHover="hover"
               >
-                <div className={styles.soltuion1}>
-                  <img src={item.img} alt="logo" className={styles.logo} />
+                <div className={styles.solutionHeader}>
+                  <div className={styles.iconWrapper}>
+                    <img src={item.img} alt={item.title} className={styles.logo} />
+                  </div>
                   <h4>{item.title}</h4>
                 </div>
-                <p>Solution the we create this company for service business solution</p>
+                <p>{item.description}</p>
+                <a href="#" className={styles.learnMore}>Learn more →</a>
               </motion.div>
             ))}
           </div>
         </motion.div>
-      </div>
-    </div>
+      </motion.div>
+    </section>
   );
 };
 

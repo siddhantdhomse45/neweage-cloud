@@ -1,36 +1,54 @@
+/* Company.module.css */
+
 .companymain {
   display: flex;
   flex-direction: column;
-  padding: 0 200px;
-  background-color: #f9f9f9;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding-bottom: 30px;
+  align-items: center;
+  padding: 5rem 2rem;
+  background-color: #f8fafc;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: hidden;
 }
 
 .headerContainer {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 4rem;
+  max-width: 800px;
 }
 
-.headerContainer h5 {
-  font-size: 1.1rem;
-  color: #df2a16;
-  margin-bottom: 8px;
-  letter-spacing: 1px;
+.subtitle {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #70f63b;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
 }
 
-.headerContainer h2 {
+.title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #333;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.headerText {
+  font-size: 1.1rem;
+  color: #64748b;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .contentContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .leftContainer,
@@ -43,49 +61,76 @@
 .solutionContainer {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 2rem;
   width: 100%;
-  max-width: 300px;
+  max-width: 320px;
 }
 
 .solutionItem {
-  background-color: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  will-change: transform;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #e2e8f0;
 }
 
-.solutionItem:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-.soltuion1 {
+.solutionHeader {
   display: flex;
   align-items: center;
-  gap: 15px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
 }
 
-.soltuion1 img {
-  width: 50px;
-  height: 50px;
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.75rem;
+  background-color: #eff6ff;
+}
+
+.solutionItem:nth-child(odd) .iconWrapper {
+  background-color: #f0fdf4;
+}
+
+.solutionItem:nth-child(even) .iconWrapper {
+  background-color: #eff6ff;
+}
+
+.logo {
+  width: 1.75rem;
+  height: 1.75rem;
   object-fit: contain;
 }
 
-.soltuion1 h4 {
-  font-size: 1.2rem;
+.solutionItem h4 {
+  font-size: 1.25rem;
   font-weight: 600;
-  color: #333;
+  color: #1e293b;
+  margin: 0;
 }
 
 .solutionItem p {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.learnMore {
   font-size: 0.95rem;
-  color: #555;
+  font-weight: 500;
+  color: #27d52a;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.learnMore:hover {
+  color: #25eb4d;
 }
 
 .imageContainer {
@@ -93,45 +138,101 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
-.imageContainer img {
-  width: 300px;
-  border-radius: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.imageWrapper {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width: 768px) {
-  .companymain {
-    padding: 40px 20px;
-  }
+.centerImage {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
 
-  .headerContainer h2 {
-    font-size: 2rem;
-  }
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.1), rgba(0,0,0,0));
+  z-index: 1;
+}
 
-  .imageContainer img {
-    width: 250px;
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contentContainer {
+    flex-direction: column;
+    gap: 3rem;
   }
-
-  .solutionContainer {
-    max-width: 100%;
-    gap: 20px;
-  }
-
-  .solutionItem {
+  
+  .leftContainer,
+  .rightContainer {
     width: 100%;
   }
-
-  .soltuion1 img {
-    width: 40px;
-    height: 40px;
+  
+  .solutionContainer {
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
   }
+  
+  .solutionItem {
+    max-width: 320px;
+    min-width: 280px;
+  }
+  
+  .imageContainer {
+    order: -1;
+    margin-bottom: 2rem;
+  }
+}
 
-  .soltuion1 h4 {
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .headerText {
     font-size: 1rem;
   }
+  
+  .solutionContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .solutionItem {
+    width: 100%;
+    max-width: 400px;
+  }
+}
 
+@media (max-width: 480px) {
+  .companymain {
+    padding: 3rem 1.5rem;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .solutionItem {
+    padding: 1.5rem;
+  }
+  
+  .solutionItem h4 {
+    font-size: 1.1rem;
+  }
+  
   .solutionItem p {
     font-size: 0.9rem;
   }

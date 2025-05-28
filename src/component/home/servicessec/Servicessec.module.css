@@ -1,82 +1,266 @@
 .servicesMainSection {
-   padding: 20px 180px;
-    background-color: #f8f9fa;
+  padding: 120px 5%;
+  background-color: #f8fafc;
+  position: relative;
+  overflow: hidden;
+}
+
+.backgroundPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(78, 214, 51, 0.03) 0%, transparent 30%),
+    radial-gradient(circle at 90% 80%, rgba(248, 197, 55, 0.03) 0%, transparent 30%);
+  z-index: 0;
+}
+
+.headerSection {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headerSection h5 {
+  font-size: 14px;
+  color: #4ed633;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.headerSection h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 25px;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #2d3748, #4a5568);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #33d646, #f8c537);
+  margin: 0 auto;
+  border-radius: 2px;
+  transform-origin: center;
+}
+
+.servicesSection {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.serviceItem {
+  width: calc(32.333% - 20px);
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  will-change: transform;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.serviceItem:hover {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+}
+
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  height: 280px;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+  transition: opacity 0.4s ease;
+}
+
+.serviceItem:hover .overlay {
+  opacity: 0.8;
+}
+
+.textWrapper {
+  padding: 35px;
+  text-align: center;
+  position: relative;
+}
+
+.iconWrapper {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #33d646, #f8c537);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -50px auto 30px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 15px 40px rgba(51, 214, 70, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.iconWrapper svg {
+  color: white;
+  font-size: 32px;
+  transition: transform 0.3s ease;
+}
+
+.textWrapper h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.serviceItem:hover .textWrapper h3 {
+  color: #33d641;
+  background: linear-gradient(90deg, #33d646, #f8c537);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.textWrapper p {
+  font-size: 16px;
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.learnMore {
+  color: #33d641;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 15px;
+}
+
+.learnMore::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #33d646, #f8c537);
+  transition: width 0.4s ease;
+}
+
+.serviceItem:hover .learnMore::after {
+  width: 100%;
+}
+
+.arrowIcon {
+  transition: transform 0.3s ease;
+}
+
+.serviceItem:hover .arrowIcon {
+  transform: translateX(5px);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .servicesMainSection {
+    padding: 100px 5%;
+  }
+  
+  .serviceItem {
+    width: calc(50% - 15px);
+  }
+  
+  .headerSection h2 {
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .imageWrapper {
+    height: 220px;
+  }
+  
+  .textWrapper {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .headerSection h2 {
+    font-size: 32px;
+  }
+  
+  .iconWrapper {
+    width: 70px;
+    height: 70px;
+    margin-top: -40px;
+  }
+  
+  .textWrapper h3 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .servicesMainSection {
+    padding: 80px 5%;
+  }
+  
+  .headerSection h2 {
+    font-size: 28px;
   }
   
   .headerSection h5 {
-    text-align: center;
-    font-size: 18px;
-    color: #d63333;
-    margin-bottom: 5px;
-  }
-  
-  .headerSection h2 {
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #000000;
-  }
-  
-  .servicesSection {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    font-size: 13px;
   }
   
   .serviceItem {
-    width: 30%;
-    margin-bottom: 20px;
-    text-align: center;
-    background-color: #ffffff;
-    padding: 0px;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  
-  .serviceItem:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  .imageWrapper img {
     width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+    max-width: 400px;
   }
   
-  .textWrapper{
-    padding: 0;
-    margin: 0;
-  }
-
-
-  .textWrapper h2 {
-    text-align: center;
-    color: #000000;
+  .textWrapper {
+    padding: 25px;
   }
   
   .textWrapper p {
-    text-align: center;
-    font-size: 20px;
-    color: #000000;
-  }
-  
-
-@media screen and (max-width: 768px) {
-  .servicesMainSection {
-    padding: 20px 40px; 
-  }
-
-  .headerSection h2 {
-    font-size: 24px; 
-  }
-
-  .serviceItem {
-    width: 45%; }
-
-  .textWrapper p {
-    font-size: 16px; 
+    font-size: 15px;
   }
 }

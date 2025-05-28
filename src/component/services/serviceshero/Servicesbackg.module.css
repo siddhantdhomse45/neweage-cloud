@@ -56,17 +56,20 @@
   padding: 0px;
   margin: 0px;
   color: #2cd36f;
-  font-size: 30px;
+  font-size: 3.5rem;
 }
 
 .Servivcesmain44 p{
  color: white;
+ text-align: justify;
+ font-size: 14px;
 }
 
 .Servivcesmain44 h2{
   padding: 0px;
   margin: 0px;
   color: #33d643;
+  font-size: 16px;
 }
 
 

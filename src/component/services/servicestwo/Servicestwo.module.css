@@ -101,10 +101,11 @@
 }
 
 .serviceCard p {
-  font-size: 15px;
+  font-size: 14px;
   color: #555;
   line-height: 1.5;
   margin-top: auto;
+  text-align: justify;
 }
 
 /* Responsive Grid */

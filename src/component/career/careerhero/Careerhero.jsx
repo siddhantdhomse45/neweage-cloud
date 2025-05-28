@@ -5,10 +5,13 @@ const Careerhero = () => {
   return (
     <div className={styles.careerHeroMain}>
       <div className={styles.careermain69}>
-        <h1>Neweage Cloud Software Service Pvt Ltd.</h1>
+        <h1>Careers</h1>
         <p>
-          Charting Your Path to Success. "Join Neweage Cloud, where talent meets
-          opportunity. Explore growth, innovation, and a supportive culture."
+          At Neweage, we believe that people are our greatest asset. Our mission
+          is driven by passionate, curious, and forward-thinking individuals who
+          are ready to challenge the status quo. Whether you're a developer,
+          designer, strategist, or support specialist, you’ll find a place here
+          to thrive, create, and grow.
         </p>
       </div>
     </div>

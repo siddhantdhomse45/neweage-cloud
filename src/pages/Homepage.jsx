@@ -16,13 +16,13 @@ const Homepage = () => {
     <>
       <Navbar/>
       <Hero/>
-      <Contactsection/>
+      {/* <Contactsection/> */}
       <Ourfeature/>
       <Experiance/>
       <Servicessec/>
       <Moresec/>
       <Company/>
-      <Callmail/>
+      {/* <Callmail/> */}
       <Footer/> 
     </>
   )

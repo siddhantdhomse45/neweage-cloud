@@ -1,239 +1,460 @@
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes modalEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+/* Container styles */
 .container {
   padding: 0 180px;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f9f9f9;
   min-height: 100vh;
   margin-top: 30px;
   margin-bottom: 30px;
-  animation: fadeInUp 0.8s ease forwards;
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
 .title {
   text-align: center;
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: 700;
   margin-bottom: 40px;
-  animation: slideDown 0.8s ease;
+  color: #2c3e50;
+  position: relative;
+  padding-bottom: 15px;
+  animation: slideUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  border-radius: 2px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  perspective: 1000px;
 }
 
-@media (max-width: 992px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
-
+/* Job card styles */
 .jobCard {
-  border: 1px solid #e6e6e6;
-  padding: 20px;
-  border-radius: 8px;
   background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  transform: translateY(30px);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   opacity: 0;
-  animation: cardFadeIn 0.6s ease forwards;
+  transform: translateY(20px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.jobCard:nth-child(1) {
-  animation-delay: 0.1s;
+.jobCard.cardVisible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: slideUp 0.5s ease-out forwards;
 }
-.jobCard:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.jobCard:nth-child(3) {
-  animation-delay: 0.3s;
-}
-.jobCard:nth-child(4) {
-  animation-delay: 0.4s;
-}
-.jobCard:nth-child(5) {
-  animation-delay: 0.5s;
-}
-.jobCard:nth-child(6) {
-  animation-delay: 0.6s;
+
+.jobCard:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
 .cardTitle {
-  color: #f4600c;
-  font-weight: bold;
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.cardTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  width: 40px;
+  height: 3px;
+  background: #3498db;
+  border-radius: 3px;
 }
 
 .description {
+  font-size: 0.95rem;
   margin-bottom: 15px;
-  color: #444;
+  color: #555;
   line-height: 1.5;
-  text-align: justify;
 }
 
 .label {
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 5px;
-  display: block;
-  text-align: left;
+  font-weight: 600;
+  color: #2c3e50;
 }
 
 .buttonGroup {
   display: flex;
-  gap: 120px;
-  margin-top: 15px;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .button {
-  padding: 8px 16px;
-  border: 1px solid #f4600c;
-  background-color: white;
-  color: #f4600c;
-  border-radius: 5px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  margin: 0 5px;
+  text-align: center;
 }
 
 .button:hover {
-  background-color: #f4600c;
-  color: white;
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #2980b9, #3498db);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
+.button:active {
+  transform: translateY(0);
+}
+
+/* Modal styles */
 .modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   z-index: 1000;
-  animation: fadeIn 0.4s ease;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease-out forwards;
 }
 
 .modalContent {
   background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: calc(100% - 360px);
-  max-width: 800px;
+  padding: 30px;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-height: 90vh;
   overflow-y: auto;
-  animation: zoomIn 0.3s ease;
+  position: relative;
+  animation: modalEnter 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 .close {
   position: absolute;
-  top: 10px;
   right: 20px;
-  font-size: 30px;
+  top: 20px;
+  font-size: 28px;
   font-weight: bold;
+  color: #7f8c8d;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-h2, h3 {
+.close:hover {
+  color: #e74c3c;
+  transform: rotate(90deg);
+}
+
+/* Form styles */
+.form {
   margin-top: 20px;
 }
 
-ol {
-  padding-left: 20px;
-}
-
-ol li {
-  margin-bottom: 10px;
-}
-
 .formGroup {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .formGroup label {
-  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: left;
 }
 
 .formGroup input,
-.formGroup textarea {
+.formGroup textarea,
+.formGroup select {
   width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 5px;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 8px;
   border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  outline: none;
 }
 
 .formGroup textarea {
+  min-height: 120px;
   resize: vertical;
 }
 
-.closeButton {
-  background-color: #f4600c;
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.submitButton {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
   color: white;
+  padding: 12px 25px;
   border: none;
-  padding: 10px 20px;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cancelButton {
+  background: #95a5a6;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cancelButton:hover {
+  background: #7f8c8d;
+  transform: translateY(-2px);
+}
+
+/* Job details modal styles */
+.responsibilities,
+.skills {
+  padding-left: 20px;
+}
+
+.responsibilities li,
+.skills li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 15px;
+  color: #34495e;
+}
+
+.responsibilities li::before,
+.skills li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #3498db;
+  font-weight: bold;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.applyButton {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.applyButton:hover {
+  background: linear-gradient(135deg, #2980b9, #3498db);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.closeDetailsButton {
+  background: #95a5a6;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.closeDetailsButton:hover {
+  background: #7f8c8d;
+  transform: translateY(-2px);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 30px;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .buttonGroup {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .button {
+    width: 100%;
+    margin: 5px 0;
+  }
+  
+  .modalContent {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  .formActions,
+  .modalActions {
+    flex-direction: column;
+  }
+  
+  .submitButton,
+  .cancelButton,
+  .applyButton,
+  .closeDetailsButton {
+    width: 100%;
+  }
+}
+
+/* Add these to your Careerone.module.css */
+.successMessage {
+  text-align: center;
+  padding: 30px;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.successMessage h3 {
+  color: #2ecc71;
+  margin-top: 20px;
+  font-size: 1.8rem;
+}
+
+.successMessage p {
+  color: #555;
   margin-top: 10px;
-  transition: background-color 0.3s ease;
+  line-height: 1.5;
 }
 
-.closeButton:hover {
-  background-color: #e04b08;
+.checkmark {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
 }
 
-/* Animations */
-@keyframes fadeInUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.checkmarkCircle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #2ecc71;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
 }
 
-@keyframes slideDown {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.checkmarkCheck {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  stroke: #2ecc71;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
 }
 
-@keyframes cardFadeIn {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes zoomIn {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
   }
 }

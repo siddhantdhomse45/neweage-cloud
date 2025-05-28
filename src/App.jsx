@@ -9,7 +9,8 @@ import Careerpage from './pages/Careerpage';
 import Healthpage from './pages/Healthpage';
 // import Adminpage from './pages/Adminpage';
 import Contactpage from './pages/Contactpage';
-import CustomCursor from './customCursor/CustomCursor';
+import ScrollToTop from './component/ScrollToTop';
+// import CustomCursor from './customCursor/CustomCursor';
 
 
 
@@ -19,6 +20,7 @@ function App() {
   return (
     <>
      <BrowserRouter>
+     <ScrollToTop />
       <Routes>
         <Route path='/' element={<Homepage/>}/>
         <Route path='/solutions' element={<Solutionspage/>}/>
@@ -30,7 +32,8 @@ function App() {
         <Route path='/contact' element={<Contactpage/>}/>
       </Routes>
     </BrowserRouter>
-    <CustomCursor/>
+    
+    {/* <CustomCursor/> */}
     </>
   );
 }

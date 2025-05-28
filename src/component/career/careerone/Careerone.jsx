@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Careerone.module.css";
 
 const jobData = [
@@ -209,19 +209,74 @@ const jobData = [
   }
 
 ];
-
 const Careerone = () => {
   const [selectedJob, setSelectedJob] = useState(null);
   const [showApplicationForm, setShowApplicationForm] = useState(false);
+  const [animateCards, setAnimateCards] = useState(false);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    coverLetter: '',
+    resume: null
+  });
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAnimateCards(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleApplyClick = (job) => {
     setSelectedJob(job);
     setShowApplicationForm(true);
+    setShowSuccessMessage(false);
   };
 
   const handleCloseForm = () => {
     setShowApplicationForm(false);
     setSelectedJob(null);
+    setShowSuccessMessage(false);
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      coverLetter: '',
+      resume: null
+    });
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleFileChange = (e) => {
+    setFormData(prev => ({
+      ...prev,
+      resume: e.target.files[0]
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you would typically send the data to your backend
+    // For demo purposes, we'll just show the success message
+    console.log('Form submitted:', formData);
+    
+    // Show success message
+    setShowSuccessMessage(true);
+    
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setShowSuccessMessage(false);
+      handleCloseForm();
+    }, 3000);
   };
 
   return (
@@ -229,17 +284,29 @@ const Careerone = () => {
       <div className={styles.title}>CURRENT OPENINGS</div>
       <div className={styles.grid}>
         {jobData.map((job, index) => (
-          <div key={index} className={styles.jobCard}>
+          <div 
+            key={index} 
+            className={`${styles.jobCard} ${animateCards ? styles.cardVisible : ''}`}
+            style={{ transitionDelay: `${index * 0.1}s` }}
+          >
             <div className={styles.cardTitle}>{job.title}</div>
             <div className={styles.description}>{job.description}</div>
             <div><span className={styles.label}>Job Position:</span> {job.position}</div>
             <div><span className={styles.label}>Experience:</span> {job.experience}</div>
             <div><span className={styles.label}>Location:</span> {job.location}</div>
             <div className={styles.buttonGroup}>
-              <button className={styles.button} onClick={() => handleApplyClick(job)}>
+              <button 
+                className={styles.button} 
+                onClick={() => handleApplyClick(job)}
+                aria-label={`Apply for ${job.title}`}
+              >
                 Apply Now
               </button>
-              <button className={styles.button} onClick={() => { setSelectedJob(job); setShowApplicationForm(false); }}>
+              <button 
+                className={styles.button} 
+                onClick={() => { setSelectedJob(job); setShowApplicationForm(false); }}
+                aria-label={`View details for ${job.title}`}
+              >
                 Details
               </button>
             </div>
@@ -250,38 +317,107 @@ const Careerone = () => {
       {selectedJob && showApplicationForm && (
         <div className={styles.modal}>
           <div className={styles.modalContent}>
-            <span className={styles.close} onClick={handleCloseForm}>&times;</span>
+            <span 
+              className={styles.close} 
+              onClick={handleCloseForm}
+              aria-label="Close application form"
+            >
+              &times;
+            </span>
             <h2>Application Form for {selectedJob.title}</h2>
-            <form>
-              <div className={styles.formGroup}>
-                <label>Name</label>
-                <input type="text" placeholder="Enter your name" required />
+            {showSuccessMessage ? (
+              <div className={styles.successMessage}>
+                <svg className={styles.checkmark} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                  <circle className={styles.checkmarkCircle} cx="26" cy="26" r="25" fill="none"/>
+                  <path className={styles.checkmarkCheck} fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+                <h3>Thank You!</h3>
+                <p>Your application has been submitted successfully.</p>
+                <p>We'll review your information and get back to you soon.</p>
               </div>
-              <div className={styles.formGroup}>
-                <label>Email</label>
-                <input type="email" placeholder="Enter your email" required />
-              </div>
-              <div className={styles.formGroup}>
-                <label>Phone</label>
-                <input type="text" placeholder="Enter your phone number" required />
-              </div>
-              <div className={styles.formGroup}>
-                <label>Cover Letter</label>
-                <textarea placeholder="Write your cover letter here" rows="4" required></textarea>
-              </div>
-              <div className={styles.formGroup}>
-                <button type="submit" className={styles.button}>Submit Application</button>
-              </div>
-            </form>
-            <button className={styles.closeButton} onClick={handleCloseForm}>Close</button>
+            ) : (
+              <form className={styles.form} onSubmit={handleSubmit}>
+                <div className={styles.formGroup}>
+                  <label>Name</label>
+                  <input 
+                    type="text" 
+                    name="name"
+                    placeholder="Enter your name" 
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required 
+                  />
+                </div>
+                <div className={styles.formGroup}>
+                  <label>Email</label>
+                  <input 
+                    type="email" 
+                    name="email"
+                    placeholder="Enter your email" 
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required 
+                  />
+                </div>
+                <div className={styles.formGroup}>
+                  <label>Phone</label>
+                  <input 
+                    type="text" 
+                    name="phone"
+                    placeholder="Enter your phone number" 
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    required 
+                  />
+                </div>
+                <div className={styles.formGroup}>
+                  <label>Cover Letter</label>
+                  <textarea 
+                    name="coverLetter"
+                    placeholder="Write your cover letter here" 
+                    rows="4" 
+                    value={formData.coverLetter}
+                    onChange={handleInputChange}
+                    required
+                  ></textarea>
+                </div>
+                <div className={styles.formGroup}>
+                  <label>Resume</label>
+                  <input 
+                    type="file" 
+                    accept=".pdf,.doc,.docx" 
+                    onChange={handleFileChange}
+                    required 
+                  />
+                </div>
+                <div className={styles.formActions}>
+                  <button type="submit" className={styles.submitButton}>
+                    Submit Application
+                  </button>
+                  <button 
+                    type="button" 
+                    className={styles.cancelButton}
+                    onClick={handleCloseForm}
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </form>
+            )}
           </div>
         </div>
       )}
-
+      
       {selectedJob && !showApplicationForm && (
         <div className={styles.modal}>
           <div className={styles.modalContent}>
-            <span className={styles.close} onClick={() => setSelectedJob(null)}>&times;</span>
+            <span 
+              className={styles.close} 
+              onClick={() => setSelectedJob(null)}
+              aria-label="Close job details"
+            >
+              &times;
+            </span>
             <h2>Job Description for {selectedJob.title}</h2>
             <p><strong>Job Position:</strong> {selectedJob.position}</p>
             <p><strong>Experience:</strong> {selectedJob.experience}</p>
@@ -289,21 +425,32 @@ const Careerone = () => {
             <p>{selectedJob.description}</p>
 
             <h3>Responsibilities:</h3>
-            <ol>
+            <ol className={styles.responsibilities}>
               {selectedJob.responsibilities.map((res, idx) => (
                 <li key={idx}>{res}</li>
               ))}
             </ol>
 
             <h3>Required Skills:</h3>
-            <ol>
+            <ol className={styles.skills}>
               {selectedJob.skills.map((skill, idx) => (
                 <li key={idx}>{skill}</li>
               ))}
             </ol>
-            <button className={styles.button} onClick={() => handleApplyClick(selectedJob)}>
-              Apply for this Job
-            </button>
+            <div className={styles.modalActions}>
+              <button 
+                className={styles.applyButton} 
+                onClick={() => handleApplyClick(selectedJob)}
+              >
+                Apply for this Job
+              </button>
+              <button 
+                className={styles.closeDetailsButton}
+                onClick={() => setSelectedJob(null)}
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       )}

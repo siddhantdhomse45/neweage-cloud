@@ -1,295 +1,315 @@
-/* .callmailMain {
-  background-color: #22d81e;
-  display: flex;
-  padding: 20px 180px;
-  text-align: start;
-  border-radius: 50px;
-  margin-bottom: 2px; 
-  justify-content: space-between;
-}
+/* Callmail.module.css */
 
-.header h4 {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-  color: #ffffff;
-}
-
-.callmailcontaner {
-  gap: 20px;
-}
-
-.contactContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.contactBlock1 {
-  display: flex;
-  align-items: center;
-  background-color: #fff7f7;
-  padding: 15px;
-  border-radius: 18px 0px;
-  width: 300px;
-}
-
-.iconContainer img {
-  width: 40px;
-  height: 40px;
-  margin: 20px;
-}
-
-.contactInfo h6 {
-  font-size: 1.2rem;
-  margin: 0 0 5px 0;
-}
-
-.contactInfo p {
-  margin: 0;
-}
-
-.imageContainer img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 30px 0px;
-}
-
-
-
-
-@media screen and (max-width: 768px) {
-  .callmailMain {
-    padding: 20px 40px; 
-    flex-direction: column;
-    
-  }
-
-  .header h4 {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-  }
-
-  .contactContainer {
-    gap: 15px;
-    flex-direction: column;
-    align-items: center; 
-  }
-
-  .contactBlock1 {
-    margin-bottom: 28px;
-    width: 90%;
-    padding: 15px;
-  }
-
-  .iconContainer img {
-    width: 35px;
-    height: 35px;
-    margin: 15px;
-  }
-
-  .contactInfo h6 {
-    font-size: 1rem;
-  }
-
-  .imageContainer img {
-    width: 100%; 
-    max-width: 100%; 
-    border-radius: 10px;
-  }
-} */
-
-
-
-/* File: src/components/CompanyIntro.module.css */
 .introWrapper {
-  padding: 0 180px;
-  background: #f9f9fb;
-  padding-top: 70px;
-  padding-bottom: 50px;
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f9f9fb 0%, #f0f2ff 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
-  gap: 3rem;
+  align-items: center;
+  gap: 60px;
   max-width: 1280px;
-  margin: auto;
-  padding: 0 1rem;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 1;
 }
 
 .left {
   flex: 1;
-  position: relative;
   min-width: 300px;
+  position: relative;
+}
+
+.imageContainer {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.imageContainer:hover {
+  transform: translateY(-5px);
 }
 
 .image {
   width: 100%;
-  border-radius: 1.5rem;
-  object-fit: cover;
   height: 500px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  object-fit: cover;
+  display: block;
 }
 
-.image:hover {
-  transform: scale(1.02);
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent 40%);
 }
 
 .playButton {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background: linear-gradient(to right, #5e2ced, #40a4ff);
-  color: #fff;
-  border: none;
-  font-size: 24px;
+  bottom: 30px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  background: linear-gradient(135deg, #5e2ced 0%, #40a4ff 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
   cursor: pointer;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s;
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(94, 44, 237, 0.4);
+  transition: all 0.3s ease;
 }
 
 .playButton:hover {
-  background: linear-gradient(to right, #4b1fd3, #3591e6);
+  transform: scale(1.1);
+  box-shadow: 0 15px 40px rgba(94, 44, 237, 0.6);
+}
+
+.playIcon {
+  font-size: 20px;
 }
 
 .right {
-  flex: 1.2;
+  flex: 1;
   min-width: 320px;
+  max-width: 600px;
 }
 
 .badge {
-  background: #ece9ff;
-  border-radius: 999px;
-  color: #5e2ced;
-  font-weight: bold;
-  padding: 0.4rem 1.2rem;
-  font-size: 0.9rem;
-  border: none;
-  margin-bottom: 1rem;
   display: inline-block;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background: rgba(94, 44, 237, 0.1);
+  color: #5e2ced;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-h1 {
-  font-size: 2.8rem;
-  font-weight: 800;
-  color: #1b1b1b;
-  margin-bottom: 1.2rem;
+.heading {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a1a;
   line-height: 1.3;
+  margin-bottom: 20px;
 }
 
 .highlight {
   color: #5e2ced;
+  position: relative;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: rgba(94, 44, 237, 0.2);
+  z-index: -1;
+  border-radius: 4px;
 }
 
 .description {
-  font-size: 1.1rem;
+  font-size: 18px;
+  line-height: 1.7;
   color: #555;
+  margin-bottom: 30px;
+  padding-left: 20px;
   border-left: 4px solid #5e2ced;
-  padding-left: 1.2rem;
-  margin-bottom: 2.2rem;
-  line-height: 1.6;
 }
 
 .features {
   display: flex;
-  gap: 2rem;
   flex-wrap: wrap;
-  margin-bottom: 2.5rem;
+  gap: 20px;
+  margin-bottom: 40px;
 }
 
 .featureItem {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  background: #fff;
-  border-radius: 1rem;
-  padding: 1rem 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  gap: 15px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  flex: 1;
+  min-width: 200px;
 }
 
-.icon {
-  font-size: 2rem;
+.featureItem:hover {
+  transform: translateY(-5px);
+}
+
+.featureIcon {
+  width: 40px;
+  height: 40px;
+  background: rgba(94, 44, 237, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #5e2ced;
+  font-size: 18px;
+}
+
+.featureText {
+  display: flex;
+  flex-direction: column;
+}
+
+.featureText strong {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.featureText span {
+  font-size: 14px;
+  color: #666;
 }
 
 .ctaSection {
   display: flex;
-  align-items: center;
-  gap: 2rem;
   flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
 }
 
 .contactButton {
-  background: linear-gradient(to right, #5e2ced, #40a4ff);
-  color: #fff;
-  border: none;
-  padding: 0.9rem 2.2rem;
-  font-weight: bold;
-  font-size: 1rem;
-  border-radius: 999px;
-  cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s ease;
+  gap: 10px;
+  background: linear-gradient(135deg, #5e2ced 0%, #40a4ff 100%);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 32px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(94, 44, 237, 0.3);
+  transition: all 0.3s ease;
 }
 
 .contactButton:hover {
-  background: linear-gradient(to right, #4b1fd3, #3591e6);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(94, 44, 237, 0.4);
+}
+
+.arrowIcon {
+  transition: transform 0.3s ease;
+}
+
+.contactButton:hover .arrowIcon {
+  transform: translateX(5px);
 }
 
 .callInfo {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 15px;
+  background: white;
+  padding: 15px 25px;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .callIcon {
-  background-color: #f1f1ff;
-  color: #5e2ced;
-  padding: 1rem;
+  width: 50px;
+  height: 50px;
+  background: rgba(94, 44, 237, 0.1);
   border-radius: 50%;
-  font-size: 1.2rem;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  color: #5e2ced;
+  font-size: 18px;
+}
+
+.callDetails {
+  display: flex;
+  flex-direction: column;
 }
 
 .callText {
-  color: #888;
-  font-size: 0.9rem;
+  font-size: 14px;
+  color: #777;
 }
 
 .callNumber {
-  font-weight: bold;
-  font-size: 1.3rem;
-  color: #1e1e1e;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 30px;
+  }
+  
+  .heading {
+    font-size: 36px;
+  }
 }
 
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
+  .introWrapper {
+    padding: 80px 0;
   }
-
-  .description {
-    font-size: 1rem;
+  
+  .container {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 20px;
   }
-
+  
   .image {
-    height: 300px;
+    height: 400px;
   }
+  
+  .heading {
+    font-size: 32px;
+  }
+  
+  .description {
+    font-size: 16px;
+  }
+}
 
-  .contactButton {
-    padding: 0.7rem 1.5rem;
+@media (max-width: 480px) {
+  .heading {
+    font-size: 28px;
+  }
+  
+  .featureItem {
+    min-width: 100%;
+  }
+  
+  .ctaSection {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .callInfo {
+    width: 100%;
   }
 }

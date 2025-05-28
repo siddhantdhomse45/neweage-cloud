@@ -1,6 +1,6 @@
 
 .navbarmain {
-  position: absolute;
+  position: sticky;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -56,11 +56,12 @@
   background-color: #10e18a;
   color: #fff;
   border-radius: 45px;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   border: none;
   cursor: pointer;
   font-weight: bold;
-  
+  font-size: 14px;
+ 
 }
 
 .button:hover {

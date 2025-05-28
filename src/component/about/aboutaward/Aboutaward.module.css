@@ -10,10 +10,20 @@
 .card1 {
   flex: 1;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   border-radius: 8px;
   padding: 20px;
   text-align: center;
   width: 200px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card1:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .imageWrapper {
@@ -21,18 +31,20 @@
 }
 
 .imageWrapper img {
-  width:50px;
+  width: 50px;
   height: auto;
 }
 
 .textWrapper h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 0;
-  color: #333;
+  color: #4ee24b;
+  font-weight: bold;
 }
 
+
 .textWrapper p {
-  font-size: 0.9rem;
+  font-size: 14px;
   color: #777;
   margin: 5px 0 0;
 }
