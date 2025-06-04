@@ -1,5 +1,5 @@
 .servicesMainSection {
-  padding: 80px 5%;
+  padding: 30px 5% 80px; /* Reduced top padding */
   background-color: #f8fafc;
   position: relative;
   overflow: hidden;
@@ -20,12 +20,13 @@
 
 .headerSection {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 60px; /* Reduced from 80px */
   position: relative;
   z-index: 1;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 20px; 
 }
 
 .headerSection h5 {
@@ -33,7 +34,7 @@
   color: #4ed633;
   text-transform: uppercase;
   letter-spacing: 3px;
-  margin-bottom: 20px;
+  margin-bottom: 15px; /* Reduced from 20px */
   font-weight: 600;
 }
 
@@ -41,7 +42,7 @@
   font-size: 42px;
   font-weight: 700;
   color: #1a202c;
-  margin-bottom: 25px;
+  margin-bottom: 20px; /* Reduced from 25px */
   line-height: 1.2;
   background: linear-gradient(90deg, #2d3748, #4a5568);
   -webkit-background-clip: text;
@@ -62,7 +63,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 25px; /* Reduced from 30px */
   position: relative;
   z-index: 1;
   max-width: 1200px;
@@ -70,11 +71,11 @@
 }
 
 .serviceItem {
-  width: calc(32.333% - 20px);
+  width: calc(30.333% - 17px); /* Adjusted for better fit */
   background-color: #ffffff;
-  border-radius: 20px;
+  border-radius: 18px; /* Slightly reduced */
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08); /* Reduced shadow */
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   will-change: transform;
@@ -82,14 +83,14 @@
 }
 
 .serviceItem:hover {
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12); /* Reduced hover shadow */
   transform: translateY(-5px);
 }
 
 .imageWrapper {
   position: relative;
   overflow: hidden;
-  height: 280px;
+  height: 260px; /* Slightly reduced */
 }
 
 .imageWrapper img {
@@ -114,37 +115,37 @@
 }
 
 .textWrapper {
-  padding: 35px;
+  padding: 30px; /* Reduced from 35px */
   text-align: center;
   position: relative;
 }
 
 .iconWrapper {
-  width: 80px;
-  height: 80px;
+  width: 75px; /* Slightly reduced */
+  height: 75px; /* Slightly reduced */
   background: linear-gradient(135deg, #33d646, #f8c537);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: -50px auto 30px;
+  margin: -45px auto 25px; /* Adjusted margins */
   position: relative;
   z-index: 2;
-  box-shadow: 0 15px 40px rgba(51, 214, 70, 0.3);
+  box-shadow: 0 12px 35px rgba(51, 214, 70, 0.3); /* Reduced shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .iconWrapper svg {
   color: white;
-  font-size: 32px;
+  font-size: 30px; /* Slightly reduced */
   transition: transform 0.3s ease;
 }
 
 .textWrapper h3 {
-  font-size: 24px;
+  font-size: 22px; /* Slightly reduced */
   font-weight: 700;
   color: #1a202c;
-  margin-bottom: 20px;
+  margin-bottom: 15px; /* Reduced from 20px */
   transition: color 0.3s ease;
 }
 
@@ -157,10 +158,10 @@
 }
 
 .textWrapper p {
-  font-size: 16px;
+  font-size: 15px; /* Slightly reduced */
   color: #4a5568;
-  line-height: 1.7;
-  margin-bottom: 30px;
+  line-height: 1.6; /* Adjusted */
+  margin-bottom: 25px; /* Reduced from 30px */
 }
 
 .learnMore {
@@ -172,7 +173,7 @@
   gap: 8px;
   transition: all 0.3s ease;
   position: relative;
-  font-size: 15px;
+  font-size: 14px; /* Slightly reduced */
 }
 
 .learnMore::after {
@@ -201,11 +202,11 @@
 /* Responsive Styles */
 @media screen and (max-width: 1200px) {
   .servicesMainSection {
-    padding: 100px 5%;
+    padding: 50px 5% 70px; /* Adjusted */
   }
   
   .serviceItem {
-    width: calc(50% - 15px);
+    width: calc(50% - 12px); /* Adjusted */
   }
   
   .headerSection h2 {
@@ -219,37 +220,47 @@
   }
   
   .textWrapper {
-    padding: 30px;
+    padding: 25px; /* Reduced */
+  }
+  
+  .headerSection {
+    margin-bottom: 50px; /* Reduced */
   }
 }
 
 @media screen and (max-width: 768px) {
+  .servicesMainSection {
+    padding: 40px 5% 60px; /* Further reduced */
+  }
+  
   .headerSection h2 {
     font-size: 32px;
   }
   
   .iconWrapper {
-    width: 70px;
-    height: 70px;
-    margin-top: -40px;
+    width: 65px;
+    height: 65px;
+    margin-top: -35px;
   }
   
   .textWrapper h3 {
-    font-size: 22px;
+    font-size: 20px; /* Further reduced */
   }
 }
 
 @media screen and (max-width: 576px) {
   .servicesMainSection {
-    padding: 80px 5%;
+    padding: 30px 5% 50px; /* Tightened */
   }
   
   .headerSection h2 {
-    font-size: 28px;
+    font-size: 26px; /* Further reduced */
+    margin-bottom: 15px;
   }
   
   .headerSection h5 {
-    font-size: 13px;
+    font-size: 12px; /* Further reduced */
+    margin-bottom: 12px;
   }
   
   .serviceItem {
@@ -258,10 +269,15 @@
   }
   
   .textWrapper {
-    padding: 25px;
+    padding: 20px; /* Tightened */
   }
   
   .textWrapper p {
-    font-size: 15px;
+    font-size: 14px; /* Further reduced */
+    margin-bottom: 20px;
+  }
+  
+  .underline {
+    height: 3px; /* Slightly reduced */
   }
 }
