@@ -1,71 +1,185 @@
+/* Healthhero.module.css */
 .healthheromin {
   position: relative;
-  background-image: url(../../../assets/healthback.webp);
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 5rem;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  background: 
+    linear-gradient(135deg, rgba(63, 181, 21, 0.15) 0%, rgba(0, 0, 0, 0.75) 100%),
+    url(../../../assets/healthback.webp) center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 0 clamp(1.5rem, 8vw, 10rem);
+  box-sizing: border-box;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-out;
 }
 
-.healthheromin::before {
+.healthheromin.animateIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.healthheromin::after {
   content: "";
   position: absolute;
-  top: 0;
+  inset: 0;
+  background: linear-gradient(
+    135deg, 
+    rgba(214, 51, 51, 0.1) 0%, 
+    rgba(0, 0, 0, 0.65) 70%
+  );
+  z-index: 1;
+  opacity: 0;
+  animation: overlayFadeIn 1.5s ease-out 0.2s forwards;
+}
+
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.healthmain33 {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  color: white;
+}
+
+.healthmain33 h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  margin-bottom: 1.75rem;
+  line-height: 1.15;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  letter-spacing: -0.03em;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.3s;
+}
+
+.healthmain33 h1.animateIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.healthmain33 h1 span {
+  color: #4ed633;
+  position: relative;
+  display: inline-block;
+}
+
+.healthmain33 h1 span::after {
+  content: '';
+  position: absolute;
+  bottom: 0.15em;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-image: url(../../../assets/healthback.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 1;
+  height: 0.35em;
+  /* background: rgba(214, 51, 51, 0.35); */
+  z-index: -1;
+  border-radius: 0.25em;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+  transition-delay: 0.6s;
 }
 
-.healthheromin::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.5;
-    z-index: 2;
+.healthmain33 h1.animateIn span::after {
+  transform: scaleX(0.9);
 }
 
-.healthheromin > * {
-    position: relative;
-    z-index: 3;
+.healthmain33 p {
+  font-size: clamp(1rem, 1.75vw, 1.375rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2.75rem;
+  max-width: 700px;
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+  transition-delay: 0.8s;
 }
 
-.healthmain33{
-  padding: 0px 180px;
-  text-align: justify;
+.healthmain33 p.animateIn {
+  opacity: 1;
+  transform: translateY(0);
 }
-.healthmain33 h1{
-  color: #d63333;
+
+.ctaButton {
+  display: inline-block;
+  background: #38d633;
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: clamp(0.9375rem, 1.1vw, 1.125rem);
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  box-shadow: 0 4px 15px rgba(214, 51, 51, 0.4);
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
 }
-.healthmain33 p{
- color: #ffffff;
+
+.ctaButton.animateIn {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.ctaButton:hover {
+  background: #3fc12b;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(70, 214, 51, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .healthheromin {
+    text-align: center;
+  }
+  
+  .healthmain33 {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .healthmain33 p {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (max-width: 768px) {
-  .healthmain33 {
-    height: auto;
-    min-height: 70vh;
-    flex-direction: column; 
-    justify-content: center; 
-    padding: 0px 20px;
+  .healthheromin {
+    min-height: 85vh;
+    padding: 0 clamp(1rem, 5vw, 3rem);
   }
-
+  
   .healthmain33 h1 {
-    font-size: 2rem;
+    margin-bottom: 1.25rem;
   }
-
+  
   .healthmain33 p {
-    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .healthheromin {
+    min-height: 90vh;
   }
 }

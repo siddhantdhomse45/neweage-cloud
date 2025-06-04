@@ -1,83 +1,147 @@
-// import React from 'react'
-// import health from '/src/assets/health.jpg'
-// import styles from './Healthone.module.css'
-
-// const Healthone = () => {
-//   return (
-//     <div className={styles.healthoneContainer}>
-//       <div className={styles.heroSection}>
-//         <div className={styles.imageContainer}>
-//           <img src={health} alt="Healthcare transformation" />
-//         </div>
-//         <div className={styles.heroText}>
-//           <h3>Transforming Healthcare, Empowering Lives</h3>
-//           <p>Neweage Cloud is dedicated to revolutionizing the healthcare landscape by providing innovative IT solutions tailored to meet the evolving needs of the industry. From electronic health record systems to telemedicine platforms, we empower healthcare providers to deliver exceptional care through seamless digital experiences. Our HIPAA-compliant solutions prioritize patient privacy and security while enhancing access to care and driving patient satisfaction. With RPBS, healthcare organizations can embrace the future of healthcare delivery with confidence.</p>
-//         </div>
-//       </div>
-//       <div className={styles.servicesSection}>
-//         <div className={styles.serviceItem}>
-//           <h2>Healthcare IT Infrastructure</h2>
-//           <p>Infrastructure solutions tailored to the needs of healthcare organizations. From network design and implementation to cloud services and cybersecurity, we ensure that our clients' IT systems are robust, secure, and scalable.</p>
-//         </div>
-//         <div className={styles.serviceItem}>
-//           <h2>Electronic Health Records Systems</h2>
-//           <p>Our EHR solutions streamline clinical workflows, enhance data accessibility, and improve patient care coordination. We offer customized EHR implementations, training, and support to help healthcare providers maximize the benefits of digital health records.</p>
-//         </div>
-//         <div className={styles.serviceItem}>
-//           <h2>Telemedicine Platforms</h2>
-//           <p>In response to the growing demand for telehealth services, RPBS develops and deploys telemedicine platforms that enable remote consultations, virtual visits, and remote patient monitoring. Our solutions facilitate seamless communication between healthcare providers and patients, improving access to care and patient outcomes.</p>
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default Healthone
-
-
-
-
 import React from 'react';
 import health from '/src/assets/health.jpg';
 import styles from './Healthone.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faHospital,
+  faFileMedical,
+  faLaptopMedical,
+  faShieldAlt,
+  faCloud,
+  faUserMd,
+  faArrowRight,
+  faSyncAlt,
+  faVideo,
+  faChartLine
+} from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.3,
+      duration: 0.6,
+      ease: 'easeOut',
+    },
+  }),
+};
 
 const Healthone = () => {
   return (
     <div className={styles.healthoneContainer}>
       {/* Hero Section */}
-      <div className={styles.heroSection}>
-        <div className={styles.imageContainer}>
-          <img src={health} alt="Healthcare transformation" />
-        </div>
-        <div className={styles.heroText}>
-          <h3>Transforming Healthcare, Empowering Lives</h3>
-          <p>
-            Neweage Cloud is dedicated to revolutionizing the healthcare landscape by providing innovative IT solutions tailored to meet the evolving needs of the industry. From electronic health record systems to telemedicine platforms, we empower healthcare providers to deliver exceptional care through seamless digital experiences. Our HIPAA-compliant solutions prioritize patient privacy and security while enhancing access to care and driving patient satisfaction. With RPBS, healthcare organizations can embrace the future of healthcare delivery with confidence.
+      <section className={styles.heroSection}>
+        <motion.div 
+          className={styles.imageContainer}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <img src={health} alt="Healthcare transformation" className={styles.heroImage} />
+          <div className={styles.imageOverlay}></div>
+        </motion.div>
+
+        <motion.div 
+          className={styles.heroContent}
+          initial="hidden"
+          animate="visible"
+          variants={fadeInUp}
+          custom={1}
+        >
+          <h3 className={styles.heroTitle}>
+            Transforming <span>Healthcare</span>, Empowering <span>Lives</span>
+          </h3>
+          <p className={styles.heroDescription}>
+            Neweage Cloud is dedicated to revolutionizing the healthcare landscape by providing innovative IT solutions tailored to meet the evolving needs of the industry. From electronic health record systems to telemedicine platforms, we empower healthcare providers to deliver exceptional care through seamless digital experiences.
           </p>
-        </div>
-      </div>
+          <motion.button 
+            className={styles.ctaButton}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <FontAwesomeIcon icon={faUserMd} className={styles.buttonIcon} />
+            Learn More About Our Solutions
+          </motion.button>
+        </motion.div>
+      </section>
 
       {/* Services Section */}
-      <div className={styles.servicesSection}>
-        <div className={styles.serviceItem}>
-          <h2>Healthcare IT Infrastructure</h2>
-          <p>
-            Infrastructure solutions tailored to the needs of healthcare organizations. From network design and implementation to cloud services and cybersecurity, we ensure that our clients' IT systems are robust, secure, and scalable.
-          </p>
+      <section className={styles.servicesSection}>
+        <motion.h2 
+          className={styles.sectionTitle}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >Our Healthcare Solutions</motion.h2>
+
+        <motion.p 
+          className={styles.sectionSubtitle}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
+        >Innovative technologies designed to transform patient care</motion.p>
+
+        <div className={styles.servicesGrid}>
+          {[{
+            icon: faHospital,
+            title: 'Healthcare IT Infrastructure',
+            desc: 'Robust infrastructure solutions tailored for healthcare organizations. From network design to cloud services and cybersecurity, we ensure your systems are secure and scalable.',
+            features: [
+              { icon: faShieldAlt, text: 'HIPAA Compliant' },
+              { icon: faCloud, text: 'Cloud Solutions' }
+            ],
+            link: 'Explore Infrastructure'
+          }, {
+            icon: faFileMedical,
+            title: 'Electronic Health Records',
+            desc: 'Our EHR solutions streamline clinical workflows and improve patient care coordination with customized implementations, training, and support.',
+            features: [
+              { icon: faShieldAlt, text: 'Data Security' },
+              { icon: faSyncAlt, text: 'Real-time Updates' }
+            ],
+            link: 'Discover EHR Solutions'
+          }, {
+            icon: faLaptopMedical,
+            title: 'Telemedicine Platforms',
+            desc: 'Cutting-edge telemedicine platforms enabling remote consultations, virtual visits, and patient monitoring to improve access to care.',
+            features: [
+              { icon: faVideo, text: 'Video Consultations' },
+              { icon: faChartLine, text: 'Analytics' }
+            ],
+            link: 'Learn About Telehealth'
+          }].map((service, index) => (
+            <motion.div
+              className={styles.serviceCard}
+              key={index}
+              custom={index}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+            >
+              <div className={styles.serviceIcon}>
+                <FontAwesomeIcon icon={service.icon} />
+                <div className={styles.iconBackground}></div>
+              </div>
+              <h3 className={styles.serviceTitle}>{service.title}</h3>
+              <p className={styles.serviceDescription}>{service.desc}</p>
+              <div className={styles.serviceFeatures}>
+                {service.features.map((feat, i) => (
+                  <span key={i}><FontAwesomeIcon icon={feat.icon} /> {feat.text}</span>
+                ))}
+              </div>
+              <a href="#" className={styles.serviceLink}>
+                {service.link} <FontAwesomeIcon icon={faArrowRight} />
+              </a>
+            </motion.div>
+          ))}
         </div>
-        <div className={styles.serviceItem}>
-          <h2>Electronic Health Records Systems</h2>
-          <p>
-            Our EHR solutions streamline clinical workflows, enhance data accessibility, and improve patient care coordination. We offer customized EHR implementations, training, and support to help healthcare providers maximize the benefits of digital health records.
-          </p>
-        </div>
-        <div className={styles.serviceItem}>
-          <h2>Telemedicine Platforms</h2>
-          <p>
-            In response to the growing demand for telehealth services, RPBS develops and deploys telemedicine platforms that enable remote consultations, virtual visits, and remote patient monitoring. Our solutions facilitate seamless communication between healthcare providers and patients, improving access to care and patient outcomes.
-          </p>
-        </div>
-      </div>
+      </section>
     </div>
   );
 };

@@ -44,8 +44,9 @@
 }
 
 .mainImage {
-  width: 100%;
-  max-width: 500px;
+  width: 80%;
+  max-width: 400px;
+  height: 80vh;
   border-radius: 16px;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
   transition-delay: 0.2s !important;

@@ -2,7 +2,7 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
 
-import completed from '/src/assets/completed.png';
+import completed from '/src/assets/completed1.png';
 import happyclient from '/src/assets/happyclient.png';
 import partner from '/src/assets/partner.png';
 import trophy from '/src/assets/trophy.png';

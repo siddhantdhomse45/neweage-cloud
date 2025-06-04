@@ -29,7 +29,7 @@ const Aboutleaders = () => {
         <div className={`${styles.leftContent} ${styles.animateOnScroll}`}>
           <div className={styles.imageContainer}>
             <img
-              src="https://bracketweb.com/tolak-html/main/assets/images/resources/about-3-1.jpg"
+              src="/src/assets/completed2.jpg"
               alt="Team working"
               className={`${styles.mainImage} ${styles.animateOnScroll}`}
             />

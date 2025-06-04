@@ -1,78 +1,107 @@
+/* Careerhero.module.css */
+
 .careerHeroMain {
   position: relative;
-  background-image: url(../../../assets/Careerback.jpg);
-  background-size: cover;
-  background-position: center;
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 5rem;
-  width: 100%;
-  height: 100vh;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+    url('../../../assets/Careerback.jpg') center/cover no-repeat;
+  padding: 5rem 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-out;
 }
 
-.careerHeroMain::before {
-  content: "";
+.careerHeroMain.animateIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../../../assets/Careerback.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.537) 100%
+  );
   z-index: 1;
-}
-.careerHeroMain::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0.5;
-  z-index: 2;
-}
-
-.careerHeroMain > * {
-  position: relative;
-  z-index: 3;
+  opacity: 0;
+  animation: overlayFadeIn 1.5s ease-out 0.2s forwards;
 }
 
 .careermain69 {
-  padding: 0px 180px;
-  margin: 0px;
-  text-align: start;
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 clamp(1rem, 8vw, 180px);
+  color: white;
+  text-align: left;
 }
+
 .careermain69 h1 {
   color: #33d643;
-  font-size: 3.5rem;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
 .careermain69 p {
-  color: #ffffff;
-  font-size: 14px;
-  text-align: justify;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.6;
+  max-width: 800px;
+  margin-bottom: 2rem;
 }
 
+/* Animations */
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
-
+/* Responsive Design */
 @media (max-width: 768px) {
+  .careerHeroMain {
+    min-height: 80vh;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+
   .careermain69 {
-    padding: 20px;
-    height: auto; 
-    min-height: 70vh; 
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
+    padding: 0 1.5rem;
   }
 
   .careermain69 h1 {
-    font-size: 2rem;
+    margin-bottom: 1rem;
   }
 
   .careermain69 p {
-    font-size: 1rem;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .careerHeroMain {
+    min-height: 90vh;
+  }
+
+  .careermain69 {
+    padding: 0 1rem;
   }
 }

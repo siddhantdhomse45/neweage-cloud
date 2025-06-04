@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import Web from "/src/assets/Web.jpg";
 import Data from "/src/assets/Data.jpg";
-import Digital from "/src/assets/Digital.jpg";
-import AWS from "/src/assets/AWS.jpg";
+import Digital from "/src/assets/DigitalMarketing.png";
+import AWS from "/src/assets/AWS1.png";
 import mobile from "/src/assets/mobile.avif";
 import Cloud from "/src/assets/Cloud.jpg";
 import styles from "./Servicestwo.module.css";

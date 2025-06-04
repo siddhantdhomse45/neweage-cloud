@@ -1,147 +1,169 @@
-@keyframes appear{
-from{
-  opacity: 0;
-  scale: 0.5;
-}
-to{
-opacity: 1;
-scale: 1;
-}
-}
-.contactForm{
-  animation: appear 1s linear;
-}
-
-.contactInfo{
-  animation: appear 1s linear;
-}
-
-
-.contactContainer444 {
-  background-image: url(../../assets/Adminback.jpeg);
-  background-repeat: no-repeat;
+.contactContainer {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  display: flex;
   align-items: center;
   justify-content: center;
-  background-size: cover;
+  padding: 2rem;
+}
+
+.contactWrapper {
+  display: flex;
+  max-width: 1200px;
   width: 100%;
-  height: auto;
-  display: flex;
-  padding: 0px;
-  margin: 0px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-.contactmain {
-  padding: 200px 200px 100px 200px;
-  display: flex;
-}
-
-.contactInfo {
+.contactForm, .contactInfo {
   flex: 1;
-  text-align: justify;
-  color: white;
   padding: 3rem;
-  border-radius: 10px;
-}
-
-.contactInfo h3 {
-  color: #df2a16;
-  margin-bottom: 10px;
-}
-
-.contactInfo p {
-  margin-bottom: 20px;
-  color: white;
-}
-
-.contactInfo ul {
-  list-style: none;
-  padding: 0;
-}
-
-.contactInfo ul li {
-  margin-bottom: 10px;
-}
-
-.contactInfo strong {
-  color: #df2a16;
-}
-
-.socialLinks {
-  margin-top: 20px;
-  color: #df2a16;
-}
-
-.socialLinks span {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.socialLinks a {
-  margin-right: 10px;
-  font-size: 20px;
-  text-decoration: none;
-  color: #df2a16;
 }
 
 .contactForm {
-  flex: 1;
-  padding: 30px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  background-color: #f9f9f9;
+  background: white;
 }
 
-.contactForm h3 {
-  color: #df2a16;
-  margin-bottom: 10px;
-}
-
-.contactForm p {
-  margin-bottom: 20px;
-}
-
-.input,
-.textarea {
-  padding: 10px;
-  width: 95%;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.textarea {
-  height: 150px;
-  resize: none;
-}
-
-.button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #df2a16;
+.contactInfo {
+  background: #2c3e50;
   color: white;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+h2 span {
+  color: #3fe73c;
+}
+
+.contactForm h2::after, .contactInfo h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background: #3ce759;
+}
+
+.contactInfo h2::after {
+  background: white;
+}
+
+p {
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.inputGroup {
+  margin-bottom: 1.5rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #7be73c;
+  outline: none;
+  box-shadow: 0 0 10px rgba(231, 76, 60, 0.1);
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 15px;
+  background: #3ce756;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
-.button:hover {
-  background-color: #771d13;
+.submitBtn:hover {
+  background: #4ec02b;
 }
 
+.contactDetails {
+  margin: 2rem 0;
+}
 
+.detailItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #3ce745;
+  margin-right: 1rem;
+  margin-top: 5px;
+}
+
+.contactInfo .icon {
+  color: white;
+}
+
+h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.socialMedia {
+  margin-top: 2rem;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcons a {
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+}
+
+.socialIcons a:hover {
+  color: #3ce74a;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .contactContainer444 {
-    height: auto;
-    padding: 80px 0;
-  }
-
-  .contactmain {
+  .contactWrapper {
     flex-direction: column;
-    align-items: center;
-    padding: 20px;
   }
 
-  .contactInfo, .contactForm {
-    width: 80%;
-    padding: 10px;
+  .contactForm, .contactInfo {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactContainer {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
   }
 }

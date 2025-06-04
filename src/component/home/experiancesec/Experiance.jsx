@@ -120,15 +120,15 @@ const Experiance = () => {
 
           <div className={styles.statsContainer}>
             <div className={styles.statItem}>
-              <div className={styles.statNumber} data-count="75">0+</div>
+              <div className={styles.statNumber} data-count="75">20+</div>
               <div className={styles.statLabel}>Successful Projects</div>
             </div>
             <div className={styles.statItem}>
-              <div className={styles.statNumber} data-count="100">0%</div>
+              <div className={styles.statNumber} data-count="100">85%</div>
               <div className={styles.statLabel}>Client Satisfaction</div>
             </div>
             <div className={styles.statItem}>
-              <div className={styles.statNumber} data-count="3">0M+</div>
+              <div className={styles.statNumber} data-count="3">5K+</div>
               <div className={styles.statLabel}>Users Impacted</div>
             </div>
           </div>
