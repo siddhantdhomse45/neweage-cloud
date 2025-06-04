@@ -1,6 +1,6 @@
 /* Experience.module.css */
 .experienceContainer {
-  padding: 80px 180px;
+  padding: 60px 180px;
   background-color: #f8fafc;
   position: relative;
   overflow: hidden;
@@ -42,8 +42,8 @@
   margin: 0 auto;
   padding: 0;
   display: flex;
-  gap: 80px;
-  align-items: center;
+  gap: 60px; /* Reduced from 80px */
+  align-items: flex-start; /* Changed from center */
   position: relative;
 }
 
@@ -52,6 +52,7 @@
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  padding-top: 10px; /* Added for better alignment */
 }
 
 .imageSection {
@@ -61,7 +62,7 @@
   transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px; /* Reduced from 30px */
 }
 
 .visible {
@@ -70,7 +71,7 @@
 }
 
 .headingSection {
-  margin-bottom: 50px;
+  margin-bottom: 30px; /* Reduced from 50px */
 }
 
 .subtitle {
@@ -80,7 +81,7 @@
   color: #3B82F6;
   text-transform: uppercase;
   letter-spacing: 3px;
-  margin-bottom: 20px;
+  margin-bottom: 15px; /* Reduced from 20px */
   position: relative;
   padding-left: 60px;
 }
@@ -101,7 +102,7 @@
   font-weight: 800;
   line-height: 1.15;
   color: #0f172a;
-  margin-bottom: 20px;
+  margin-bottom: 15px; /* Reduced from 20px */
   background: linear-gradient(90deg, #0f172a 0%, #334155 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -132,24 +133,24 @@
   font-size: 18px;
   line-height: 1.7;
   color: #475569;
-  margin-bottom: 30px;
+  margin-bottom: 25px; /* Reduced from 30px */
   max-width: 85%;
 }
 
 .featuresGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 25px;
-  margin-bottom: 40px;
+  gap: 18px; /* Reduced from 25px */
+  margin-bottom: 30px; /* Reduced from 40px */
 }
 
 .featureCard {
   background-color: white;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  border-radius: 18px; /* Reduced from 20px */
+  padding: 24px; /* Reduced from 30px */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.03); /* Reduced shadow */
   display: flex;
-  gap: 20px;
+  gap: 18px; /* Reduced from 20px */
   align-items: flex-start;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   border: 1px solid rgba(0, 0, 0, 0.03);
@@ -190,14 +191,14 @@
 
 .featureCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08); /* Reduced shadow */
 }
 
 .featureIcon {
-  width: 60px;
-  height: 60px;
+  width: 54px; /* Reduced from 60px */
+  height: 54px; /* Reduced from 60px */
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(16, 185, 129, 0.08) 100%);
-  border-radius: 16px;
+  border-radius: 14px; /* Reduced from 16px */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -211,8 +212,8 @@
 }
 
 .featureIcon svg {
-  width: 24px;
-  height: 24px;
+  width: 22px; /* Reduced from 24px */
+  height: 22px; /* Reduced from 24px */
 }
 
 .featureContent {
@@ -220,20 +221,20 @@
 }
 
 .featureContent h3 {
-  font-size: 22px;
+  font-size: 20px; /* Reduced from 22px */
   font-weight: 700;
   color: #0f172a;
-  margin-bottom: 12px;
+  margin-bottom: 10px; /* Reduced from 12px */
   background: linear-gradient(90deg, #0f172a 0%, #334155 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .featureContent p {
-  font-size: 16px;
+  font-size: 15px; /* Reduced from 16px */
   color: #64748b;
   line-height: 1.6;
-  margin: 0 0 15px 0;
+  margin: 0 0 12px 0; /* Reduced bottom margin */
 }
 
 .featureProgress {
