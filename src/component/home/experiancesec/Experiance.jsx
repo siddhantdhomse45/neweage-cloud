@@ -117,21 +117,6 @@ const Experiance = () => {
               </div>
             </div>
           </div>
-
-          <div className={styles.statsContainer}>
-            <div className={styles.statItem}>
-              <div className={styles.statNumber} data-count="75">20+</div>
-              <div className={styles.statLabel}>Successful Projects</div>
-            </div>
-            <div className={styles.statItem}>
-              <div className={styles.statNumber} data-count="100">85%</div>
-              <div className={styles.statLabel}>Client Satisfaction</div>
-            </div>
-            <div className={styles.statItem}>
-              <div className={styles.statNumber} data-count="3">5K+</div>
-              <div className={styles.statLabel}>Users Impacted</div>
-            </div>
-          </div>
         </div>
 
         <div className={`${styles.imageSection} ${isVisible ? styles.visible : ""}`}>
@@ -153,10 +138,25 @@ const Experiance = () => {
             <div className={styles.imageDecoration}></div>
             <div className={styles.imageAccent}></div>
           </div>
+          
+          <div className={styles.statsContainer}>
+            <div className={styles.statItem}>
+              <div className={styles.statNumber} data-count="75">20+</div>
+              <div className={styles.statLabel}>Successful Projects</div>
+            </div>
+            <div className={styles.statItem}>
+              <div className={styles.statNumber} data-count="100">85%</div>
+              <div className={styles.statLabel}>Client Satisfaction</div>
+            </div>
+            <div className={styles.statItem}>
+              <div className={styles.statNumber} data-count="3">5K+</div>
+              <div className={styles.statLabel}>Users Impacted</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
-};
+}; 
 
 export default Experiance;
