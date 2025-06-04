@@ -1,5 +1,4 @@
 
-
 .footer {
   background-color: #0a192f;
   color: #ffffff;
@@ -22,8 +21,8 @@
 
 .footerGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
 }
 
 .footerColumn {

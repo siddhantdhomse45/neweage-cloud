@@ -29,7 +29,7 @@ const Aboutleaders = () => {
         <div className={`${styles.leftContent} ${styles.animateOnScroll}`}>
           <div className={styles.imageContainer}>
             <img
-              src="/src/assets/completed2.jpg"
+              src="/src/assets/completed3.jpg"
               alt="Team working"
               className={`${styles.mainImage} ${styles.animateOnScroll}`}
             />
