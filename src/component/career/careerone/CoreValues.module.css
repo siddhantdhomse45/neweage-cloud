@@ -27,7 +27,7 @@
 }
 
 .title {
-  color: #4b0055;
+  color: #2416b9;
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 24px;
@@ -42,7 +42,7 @@
   left: 0;
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #4b0055, #8a2be2);
+  background: linear-gradient(90deg, #000a55, #8a2be2);
   border-radius: 2px;
 }
 
@@ -81,7 +81,7 @@
   justify-content: center;
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #8a2be2, #4b0055);
+  background: linear-gradient(135deg, #432be2, #3119ab);
   border-radius: 50%;
   margin-right: 16px;
   color: white;

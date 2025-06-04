@@ -217,6 +217,7 @@
   align-self: flex-start;
   text-decoration: none;
   margin-bottom: 50px;
+  width: 100%;
 }
 
 .learnMore svg {

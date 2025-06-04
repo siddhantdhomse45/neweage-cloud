@@ -1,9 +1,8 @@
 .coreValuesSection {
   background-color: #f3f5ff;
-  padding: 0 180px;
+  padding: 60px 180px 40px; /* Increased top padding from 0 to 60px */
   text-align: center;
   color: #333;
-  padding-bottom: 40px;
 }
 
 .title {
@@ -34,8 +33,7 @@
   padding: 25px;
   text-align: left;
   border-radius: 12px;
- 
-
+  
   /* Animation base */
   opacity: 0;
   transform: translateY(40px);
@@ -69,6 +67,6 @@
 /* Responsive Padding */
 @media screen and (max-width: 768px) {
   .coreValuesSection {
-    padding: 0 40px 40px;
+    padding: 40px 40px; /* Adjusted for mobile */
   }
 }

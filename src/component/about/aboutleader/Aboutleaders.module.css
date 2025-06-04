@@ -55,11 +55,11 @@
 .secondaryImageWrapper {
   position: relative;
   align-self: flex-end;
-  margin-right: 40px;
+  margin-right: 350px;
 }
 
 .secondaryImage {
-  width: 80%;
+  width: 120%;
   height: 280px;
   object-fit: cover;
   border-radius: 16px;
@@ -74,7 +74,7 @@
   background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
   padding: 20px 30px;
   border-radius: 16px;
-  color: rgb(41, 221, 17);
+  color: white;
   display: flex;
   align-items: center;
   font-weight: 600;
@@ -117,7 +117,7 @@
 }
 
 .subTitle {
-  color: #43ee51;
+  color: #4361ee;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 14px;
@@ -135,19 +135,19 @@
   top: 50%;
   width: 40px;
   height: 2px;
-  background-color: #43ee82;
+  background-color: #4361ee;
 }
 
 .title {
-  font-size: 30px;
+  font-size: 38px;
   font-weight: 700;
   margin-bottom: 25px;
   line-height: 1.3;
-  color: #1a2e1d;
+  color: #1a1a2e;
 }
 
 .highlight {
-  color: #43ee49;
+  color: #4361ee;
   position: relative;
   display: inline-block;
 }
@@ -159,13 +159,13 @@
   left: 0;
   width: 100%;
   height: 12px;
-  /* background-color: rgba(67, 238, 76, 0.2); */
+  background-color: rgba(67, 97, 238, 0.2);
   z-index: -1;
   transform: rotate(-1deg);
 }
 
 .description {
-  font-size: 14px;
+  font-size: 16px;
   color: #4a4a6a;
   margin-bottom: 30px;
   line-height: 1.7;
@@ -183,7 +183,7 @@
   position: relative;
   margin-bottom: 10px;
   color: #333;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -194,7 +194,7 @@
   top: 15px;
   width: 30px;
   height: 30px;
-  background-color: #13e655;
+  background-color: #4361ee;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -262,7 +262,6 @@
   position: relative;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   border-left: 4px solid #4361ee;
-  
 }
 
 .quoteIcon {
@@ -276,24 +275,27 @@
 
 .quoteText {
   font-style: italic;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.6;
   padding-left: 30px;
   margin: 0;
   color: #4a4a6a;
 }
 
-/* Footer Section */
+/* Updated Footer Section - Watch Video Left, CEO Right */
+/* Updated Footer Section - Watch Video Right, CEO Left */
 .footerSection {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 30px;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .videoButton {
   background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
-  color: rgb(48, 203, 24);
+  color: white;
   border: none;
   border-radius: 50px;
   padding: 15px 30px;
@@ -304,6 +306,8 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+  order: 2; /* Changed from 1 to 2 to move video button to right */
+  margin-left: auto; /* Push to the right */
 }
 
 .videoButton:hover {
@@ -323,6 +327,9 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  order: 1; /* Changed from 2 to 1 to move founder info to left */
+  margin-left: 0; /* Remove auto margin */
+  margin-right: auto; /* Push to the left */
 }
 
 .founderImage {
@@ -351,6 +358,45 @@
   font-size: 14px;
 }
 
+/* Responsive Design - Update the media queries to maintain the order */
+@media (max-width: 768px) {
+  .footerSection {
+    flex-direction: row; /* Changed from column to row */
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .videoButton {
+    order: 2;
+    width: auto; /* Changed from 100% to auto */
+    justify-content: center;
+  }
+  
+  .founderInfo {
+    order: 1;
+    margin-right: 0;
+    width: auto; /* Changed from 100% to auto */
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .footerSection {
+    flex-direction: column; /* Stack on small screens */
+    align-items: flex-start;
+  }
+  
+  .videoButton {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .founderInfo {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .container {
@@ -377,6 +423,7 @@
   
   .mainImage {
     max-width: 100%;
+    height: auto;
   }
   
   .secondaryImageWrapper {
@@ -407,7 +454,21 @@
   
   .footerSection {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .videoButton {
+    order: 1;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .founderInfo {
+    order: 2;
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -442,6 +503,11 @@
   
   .quoteText {
     font-size: 16px;
+    padding-left: 20px;
+  }
+  
+  .quoteIcon {
+    font-size: 40px;
   }
   
   .videoButton {

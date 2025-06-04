@@ -1,4 +1,3 @@
-
 .container {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
@@ -47,7 +46,6 @@
   opacity: 0.9;
 }
 
-
 .contentWrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -82,12 +80,13 @@
   line-height: 1.8;
 }
 
-/* Job Grid */
+/* Job Grid - Updated for consistent heights and proper spacing */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  align-items: stretch;
 }
 
 .jobCard {
@@ -99,6 +98,9 @@
   opacity: 0;
   transform: translateY(20px);
   border: 1px solid #eaeaea;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
 }
 
 .cardVisible {
@@ -138,32 +140,38 @@
   white-space: nowrap;
 }
 
+/* Updated description with proper spacing */
 .description {
   color: #555;
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem 0;
   line-height: 1.7;
+  flex-grow: 1;
+  text-align: justify;
 }
 
 .cardDetails {
-  margin-bottom: 2rem;
+  margin: 1.5rem 0;
 }
 
 .detailItem {
   display: flex;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
   color: #666;
 }
 
 .detailIcon {
   margin-right: 0.7rem;
   font-size: 1.1rem;
+  color: #1e3c72;
 }
 
+/* Button group with proper spacing */
 .buttonGroup {
   display: flex;
   gap: 1rem;
-  margin-top: 1.5rem;
+  margin-top: auto;
+  padding-top: 1rem;
 }
 
 .button, .outlineButton {
@@ -280,6 +288,7 @@
 .metaIcon {
   margin-right: 0.5rem;
   font-size: 1.1rem;
+  color: #1e3c72;
 }
 
 .jobDescription {
@@ -617,6 +626,10 @@ textarea {
   .buttonGroup {
     flex-direction: column;
   }
+  
+  .jobCard {
+    min-height: auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -626,9 +639,19 @@ textarea {
   
   .title {
     font-size: 2rem;
+    margin-bottom: 1rem;
   }
   
   .jobCard {
     padding: 1.5rem;
+  }
+  
+  .buttonGroup {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .button, .outlineButton {
+    width: 100%;
   }
 }

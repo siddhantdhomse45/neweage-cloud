@@ -8,44 +8,44 @@ const jobData = [
     experience: "2-5 Years",
     location: "Pune (On-site)",
     description:
-      "We are looking for a skilled Shopify Developer with 2–5 years of hands-on experience in theme customization and Liquid programming.",
+      "A Shopify Developer is responsible for developing and customizing eCommerce websites on the Shopify platform. They specialize in creating user-friendly, conversion-optimized, and responsive online stores that align with the brand’s vision and business goals.",
     responsibilities: [
       "Design and develop custom Shopify themes and templates",
       "Collaborate with the design and marketing teams to enhance user experience",
       "Integrate third-party applications and APIs into Shopify stores",
       "Maintain and upgrade existing Shopify stores for optimal performance",
       "Troubleshoot and resolve issues in a timely manner",
-      "Ensure responsive design and compatibility across various devices and browsers"
+      "Ensure responsive design and compatibility across various devices and browsers",
     ],
     skills: [
       "Experience with Shopify and Liquid templating language",
       "Strong proficiency in HTML, CSS, and JavaScript",
       "Familiarity with version control systems (Git)",
       "Understanding of e-commerce best practices",
-      "Ability to optimize performance of online stores"
-    ]
+      "Ability to optimize performance of online stores",
+    ],
   },
   {
-    title: "Business Development Executive",
+    title: "Business Development",
     position: "Business Development Executive",
     experience: "Fresher - 5 Years",
     location: "Pune (On-site)",
     description:
-      "Identify and develop new business opportunities in the IT sector.",
+      "A Business Development Executive (BDE) plays a crucial role in driving business growth by identifying new opportunities, building client relationships, and supporting sales strategies. They are responsible for increasing company revenue by generating leads, negotiating client deals, and maintaining long-term customer satisfaction.",
     responsibilities: [
       "Generate leads, conduct market research, and develop business opportunities",
       "Establish and maintain relationships with potential clients",
       "Collaborate with sales and marketing teams to achieve business goals",
       "Participate in negotiations and close sales",
-      "Prepare proposals, presentations, and reports for clients"
+      "Prepare proposals, presentations, and reports for clients",
     ],
     skills: [
       "Excellent communication and interpersonal skills",
       "Strong analytical and problem-solving abilities",
       "Knowledge of IT services and solutions",
       "Ability to work under pressure and meet targets",
-      "Proficiency in Microsoft Office Suite"
-    ]
+      "Proficiency in Microsoft Office Suite",
+    ],
   },
   {
     title: "Node JS Developer",
@@ -53,42 +53,43 @@ const jobData = [
     experience: "2-5 Years",
     location: "Pune (On-site)",
     description:
-      "We are seeking a skilled Node.js Developer to join our dynamic and innovative development team.",
+      "A Node.js Developer is responsible for developing server-side logic, APIs, and backend components for web and mobile applications using the Node.js runtime. They ensure high performance and responsiveness to requests from the front-end and often collaborate with teams to deliver full-stack solutions.",
     responsibilities: [
       "Develop backend services and RESTful APIs using Node.js",
       "Work closely with front-end developers to integrate user-facing elements",
       "Write clean, maintainable, and efficient code",
       "Ensure high performance and responsiveness of the applications",
-      "Participate in code reviews and ensure best practices are followed"
+      "Participate in code reviews and ensure best practices are followed",
     ],
     skills: [
       "Proficiency in Node.js, Express.js",
       "Experience with databases like MongoDB, MySQL, or PostgreSQL",
       "Familiarity with RESTful API design and integration",
       "Version control experience using Git",
-      "Strong debugging and troubleshooting skills"
-    ]
+      "Strong debugging and troubleshooting skills",
+    ],
   },
   {
     title: "Python Developer",
     position: "Python Developer",
     experience: "2-5 Years",
     location: "Pune (On-site)",
-    description: "Develop and maintain high-quality Python applications.",
+    description:
+      "A Python Developer is a backend software engineer who designs, develops, and maintains applications, systems, or APIs using the Python programming language. They often work on web development, data processing, automation, machine learning, and cloud-based solutions. Python Developers collaborate with cross-functional teams to build high-performance, scalable, and secure software solutions.",
     responsibilities: [
       "Design and develop scalable web applications",
       "Write reusable, testable, and efficient code",
       "Develop APIs and integrate with external services",
       "Troubleshoot, test, and maintain core product software",
-      "Collaborate with front-end developers and project managers"
+      "Collaborate with front-end developers and project managers",
     ],
     skills: [
       "Strong knowledge of Python and frameworks like Flask/Django",
       "Experience with MySQL, PostgreSQL, or other relational databases",
       "Familiarity with RESTful API development",
       "Ability to write clean, efficient, and well-documented code",
-      "Experience with unit testing and debugging tools"
-    ]
+      "Experience with unit testing and debugging tools",
+    ],
   },
   {
     title: "PHP Developer",
@@ -96,43 +97,43 @@ const jobData = [
     experience: "1-6 Years",
     location: "Pune (On-site)",
     description:
-      "We seek a skilled and motivated PHP Developer to join our dynamic team.",
+      "A PHP Developer is a backend web developer who specializes in server-side scripting using PHP (Hypertext Preprocessor). They are instrumental in building dynamic websites, web applications, and APIs that power many online platforms. PHP Developers work closely with front-end developers, designers, and system architects to deliver seamless and robust digital solutions.",
     responsibilities: [
       "Develop and maintain web applications using PHP",
       "Write clean and efficient PHP code",
       "Collaborate with cross-functional teams to define application features",
       "Troubleshoot and debug applications",
-      "Integrate third-party services and APIs"
+      "Integrate third-party services and APIs",
     ],
     skills: [
       "Proficiency in PHP, MySQL, and other web technologies",
       "Experience with frameworks like Laravel or CodeIgniter",
       "Understanding of HTML, CSS, JavaScript",
       "Knowledge of API integrations",
-      "Familiarity with Git and version control systems"
-    ]
+      "Familiarity with Git and version control systems",
+    ],
   },
   {
-    title: "MERN/MEAN Developer",
+    title: "MERN/MEAN ",
     position: "MERN and MEAN Developer",
     experience: "1-6 Years",
     location: "Pune (On-site)",
     description:
-      "We seek a skilled and motivated MERN and MEAN Developer to join our dynamic team.",
+      "A MERN/MEAN Stack Developer is a full-stack JavaScript developer specializing in building robust web applications using either the MERN stack (MongoDB, Express.js, React.js, Node.js) or the MEAN stack (MongoDB, Express.js, Angular, Node.js). They are proficient in both frontend and backend development and ensure seamless integration between client-side and server-side components.",
     responsibilities: [
       "Build full-stack applications using MongoDB, Express, Angular/React, and Node.js",
       "Work on front-end and back-end development and ensure seamless integration",
       "Optimize the application for maximum speed and scalability",
       "Write unit tests to ensure the application's reliability",
-      "Collaborate with cross-functional teams to deliver high-quality software"
+      "Collaborate with cross-functional teams to deliver high-quality software",
     ],
     skills: [
       "Experience with the MERN or MEAN stack",
       "Proficiency in JavaScript, React, Angular, Node.js, and Express",
       "Familiarity with version control systems (Git)",
       "Experience with MongoDB or other NoSQL databases",
-      "Strong debugging and problem-solving skills"
-    ]
+      "Strong debugging and problem-solving skills",
+    ],
   },
   {
     title: "Android Developer",
@@ -140,7 +141,7 @@ const jobData = [
     experience: "1-3 Years",
     location: "Pune (On-site)",
     description:
-      "We are seeking a talented and creative Android Developer to join our dynamic team.",
+      "An Android Developer is responsible for designing and developing advanced mobile applications for devices powered by the Android operating system. They work closely with designers, product managers, and backend developers to build user-friendly, performant, and scalable mobile applications.",
     responsibilities: [
       "Design and build advanced applications for the Android platform",
       "Should have good knowledge of Kotlin",
@@ -148,7 +149,7 @@ const jobData = [
       "Work with outside data sources and APIs",
       "Unit-test code for robustness, including edge cases, usability, and general reliability",
       "Work on bug fixing and improving application performance",
-      "Continuously discover, evaluate, and implement new technologies to maximize development efficiency"
+      "Continuously discover, evaluate, and implement new technologies to maximize development efficiency",
     ],
     skills: [
       "Proven software development experience and Android skills development",
@@ -158,8 +159,8 @@ const jobData = [
       "Experience working with remote data via REST and JSON",
       "Experience with third-party libraries and APIs",
       "Working knowledge of the general mobile landscape, architectures, trends, and emerging technologies",
-      "Solid understanding of the full mobile development life cycle"
-    ]
+      "Solid understanding of the full mobile development life cycle",
+    ],
   },
   {
     title: "iOS Developer",
@@ -167,44 +168,44 @@ const jobData = [
     experience: "2-5 Years",
     location: "Pune (On-site)",
     description:
-      "We are looking for a passionate iOS Developer to join our development team and build high-quality iOS applications.",
+      "An iOS Developer is responsible for designing and developing applications for Apple’s iOS platform, ensuring a smooth, engaging, and high-performance user experience. They collaborate with designers, product managers, and backend developers to create mobile apps that meet business goals and user needs.",
     responsibilities: [
       "Design and build advanced applications for the iOS platform",
       "Collaborate with cross-functional teams to define, design, and ship new features",
       "Work with outside data sources and APIs",
       "Unit-test code for robustness, including edge cases, usability, and general reliability",
-      "Work on bug fixing and improving application performance"
+      "Work on bug fixing and improving application performance",
     ],
     skills: [
       "Experience with iOS frameworks such as UIKit, CoreData, and Core Animation",
       "Proficiency in Swift and Objective-C",
       "Experience with iOS SDK",
       "Familiarity with RESTful APIs and JSON",
-      "Solid understanding of the full mobile development life cycle"
-    ]
+      "Solid understanding of the full mobile development life cycle",
+    ],
   },
   {
-    title: "Frontend Web Designer",
+    title: "Frontend Web ",
     position: "Frontend Web Designer",
     experience: "1-3 Years",
     location: "Pune (On-site)",
     description:
-      "We are seeking a creative and talented Frontend Web Designer to join our team and build visually appealing and user-friendly websites.",
+      "A Frontend Web Designer is responsible for creating visually appealing, user-friendly, and responsive web interfaces. They combine design principles with frontend development skills to deliver engaging websites that provide an excellent user experience.",
     responsibilities: [
       "Design and implement visually stunning websites",
       "Collaborate with developers to create responsive web pages",
       "Ensure website design consistency across various devices",
       "Maintain and update websites as per requirements",
-      "Optimize website performance for speed and responsiveness"
+      "Optimize website performance for speed and responsiveness",
     ],
     skills: [
       "Strong proficiency in HTML, CSS, and JavaScript",
       "Experience with responsive design and frameworks like Bootstrap",
       "Proficiency in design tools like Adobe XD, Figma, or Sketch",
       "Familiarity with version control systems (Git)",
-      "Understanding of SEO best practices for website optimization"
-    ]
-  }
+      "Understanding of SEO best practices for website optimization",
+    ],
+  },
 ];
 
 const Careerone = () => {
@@ -213,12 +214,12 @@ const Careerone = () => {
   const [animateCards, setAnimateCards] = useState(false);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    position: '',
-    coverLetter: '',
-    resume: null
+    name: "",
+    email: "",
+    phone: "",
+    position: "",
+    coverLetter: "",
+    resume: null,
   });
   const modalRef = useRef(null);
 
@@ -226,26 +227,26 @@ const Careerone = () => {
     const timer = setTimeout(() => {
       setAnimateCards(true);
     }, 100);
-    
+
     // Handle ESC key press
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') {
+      if (e.key === "Escape") {
         handleCloseForm();
       }
     };
-    
-    window.addEventListener('keydown', handleKeyDown);
+
+    window.addEventListener("keydown", handleKeyDown);
     return () => {
       clearTimeout(timer);
-      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
 
   useEffect(() => {
     if (selectedJob) {
-      setFormData(prev => ({
+      setFormData((prev) => ({
         ...prev,
-        position: selectedJob.title
+        position: selectedJob.title,
       }));
     }
   }, [selectedJob]);
@@ -254,7 +255,7 @@ const Careerone = () => {
     setSelectedJob(job);
     setShowApplicationForm(true);
     setShowSuccessMessage(false);
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   };
 
   const handleCloseForm = () => {
@@ -262,28 +263,28 @@ const Careerone = () => {
     setSelectedJob(null);
     setShowSuccessMessage(false);
     setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      position: '',
-      coverLetter: '',
-      resume: null
+      name: "",
+      email: "",
+      phone: "",
+      position: "",
+      coverLetter: "",
+      resume: null,
     });
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = "auto";
   };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleFileChange = (e) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      resume: e.target.files[0]
+      resume: e.target.files[0],
     }));
   };
 
@@ -291,11 +292,11 @@ const Careerone = () => {
     e.preventDefault();
     // Here you would typically send the data to your backend
     // For demo purposes, we'll just show the success message
-    console.log('Form submitted:', formData);
-    
+    console.log("Form submitted:", formData);
+
     // Show success message
     setShowSuccessMessage(true);
-    
+
     // Reset form after 3 seconds
     setTimeout(() => {
       setShowSuccessMessage(false);
@@ -315,22 +316,27 @@ const Careerone = () => {
       <div className={styles.heroSection}>
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Join Our Team</h1>
-          <p className={styles.heroSubtitle}>Explore exciting career opportunities and grow with us</p>
+          <p className={styles.heroSubtitle}>
+            Explore exciting career opportunities and grow with us
+          </p>
         </div>
       </div>
-      
+
       <div className={styles.contentWrapper}>
         <div className={styles.title}>Current Openings</div>
         <p className={styles.pageDescription}>
-          We're looking for talented individuals to join our growing team. Browse our current openings 
-          and find the perfect match for your skills and aspirations.
+          We're looking for talented individuals to join our growing team.
+          Browse our current openings and find the perfect match for your skills
+          and aspirations.
         </p>
-        
+
         <div className={styles.grid}>
           {jobData.map((job, index) => (
-            <div 
-              key={index} 
-              className={`${styles.jobCard} ${animateCards ? styles.cardVisible : ''}`}
+            <div
+              key={index}
+              className={`${styles.jobCard} ${
+                animateCards ? styles.cardVisible : ""
+              }`}
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
               <div className={styles.cardHeader}>
@@ -345,16 +351,19 @@ const Careerone = () => {
                 </div>
               </div>
               <div className={styles.buttonGroup}>
-                <button 
-                  className={styles.button} 
+                <button
+                  className={styles.button}
                   onClick={() => handleApplyClick(job)}
                   aria-label={`Apply for ${job.title}`}
                 >
                   Apply Now
                 </button>
-                <button 
-                  className={styles.outlineButton} 
-                  onClick={() => { setSelectedJob(job); setShowApplicationForm(false); }}
+                <button
+                  className={styles.outlineButton}
+                  onClick={() => {
+                    setSelectedJob(job);
+                    setShowApplicationForm(false);
+                  }}
                   aria-label={`View details for ${job.title}`}
                 >
                   View Details
@@ -365,27 +374,46 @@ const Careerone = () => {
         </div>
       </div>
 
-      {(selectedJob && showApplicationForm) && (
+      {selectedJob && showApplicationForm && (
         <div className={styles.modal} onClick={handleOutsideClick}>
           <div className={styles.modalContent} ref={modalRef}>
-            <span 
-              className={styles.close} 
+            <span
+              className={styles.close}
               onClick={handleCloseForm}
               aria-label="Close application form"
             >
               &times;
             </span>
-            <h2 className={styles.modalTitle}>Application for {selectedJob.title}</h2>
+            <h2 className={styles.modalTitle}>
+              Application for {selectedJob.title}
+            </h2>
             {showSuccessMessage ? (
               <div className={styles.successMessage}>
-                <svg className={styles.checkmark} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-                  <circle className={styles.checkmarkCircle} cx="26" cy="26" r="25" fill="none"/>
-                  <path className={styles.checkmarkCheck} fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                <svg
+                  className={styles.checkmark}
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 52 52"
+                >
+                  <circle
+                    className={styles.checkmarkCircle}
+                    cx="26"
+                    cy="26"
+                    r="25"
+                    fill="none"
+                  />
+                  <path
+                    className={styles.checkmarkCheck}
+                    fill="none"
+                    d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                  />
                 </svg>
                 <h3>Application Submitted!</h3>
                 <p>Thank you for applying to {selectedJob.title} position.</p>
-                <p>Our HR team will review your application and contact you if there's a match.</p>
-                <button 
+                <p>
+                  Our HR team will review your application and contact you if
+                  there's a match.
+                </p>
+                <button
                   className={styles.successButton}
                   onClick={handleCloseForm}
                 >
@@ -397,44 +425,44 @@ const Careerone = () => {
                 <div className={styles.formRow}>
                   <div className={styles.formGroup}>
                     <label>Full Name *</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       name="name"
-                      placeholder="Your full name" 
+                      placeholder="Your full name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      required 
+                      required
                     />
                   </div>
                   <div className={styles.formGroup}>
                     <label>Email *</label>
-                    <input 
-                      type="email" 
+                    <input
+                      type="email"
                       name="email"
-                      placeholder="Your email address" 
+                      placeholder="Your email address"
                       value={formData.email}
                       onChange={handleInputChange}
-                      required 
+                      required
                     />
                   </div>
                 </div>
-                
+
                 <div className={styles.formRow}>
                   <div className={styles.formGroup}>
                     <label>Phone Number *</label>
-                    <input 
-                      type="tel" 
+                    <input
+                      type="tel"
                       name="phone"
-                      placeholder="Your phone number" 
+                      placeholder="Your phone number"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      required 
+                      required
                     />
                   </div>
                   <div className={styles.formGroup}>
                     <label>Position *</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       name="position"
                       value={formData.position}
                       readOnly
@@ -442,48 +470,52 @@ const Careerone = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div className={styles.formGroup}>
                   <label>Cover Letter</label>
-                  <textarea 
+                  <textarea
                     name="coverLetter"
-                    placeholder="Tell us why you're a great fit for this position..." 
-                    rows="5" 
+                    placeholder="Tell us why you're a great fit for this position..."
+                    rows="5"
                     value={formData.coverLetter}
                     onChange={handleInputChange}
                   ></textarea>
                 </div>
-                
+
                 <div className={styles.formGroup}>
                   <label>Upload Resume *</label>
                   <div className={styles.fileUploadWrapper}>
                     <label className={styles.fileUploadLabel}>
-                      {formData.resume ? formData.resume.name : 'Choose file...'}
-                      <input 
-                        type="file" 
-                        accept=".pdf,.doc,.docx" 
+                      {formData.resume
+                        ? formData.resume.name
+                        : "Choose file..."}
+                      <input
+                        type="file"
+                        accept=".pdf,.doc,.docx"
                         onChange={handleFileChange}
-                        required 
+                        required
                         className={styles.fileInput}
                       />
                     </label>
-                    <span className={styles.fileHint}>PDF or Word documents only (Max 5MB)</span>
+                    <span className={styles.fileHint}>
+                      PDF or Word documents only (Max 5MB)
+                    </span>
                   </div>
                 </div>
-                
+
                 <div className={styles.formActions}>
                   <button type="submit" className={styles.submitButton}>
                     Submit Application
                   </button>
-                  <button 
-                    type="button" 
+                  <button
+                    type="button"
                     className={styles.cancelButton}
                     onClick={handleCloseForm}
                   >
                     Cancel
                   </button>
                 </div>
-                
+
                 <div className={styles.formFooter}>
                   <p>We'll never share your information with third parties.</p>
                 </div>
@@ -492,19 +524,19 @@ const Careerone = () => {
           </div>
         </div>
       )}
-      
-      {(selectedJob && !showApplicationForm) && (
+
+      {selectedJob && !showApplicationForm && (
         <div className={styles.modal} onClick={handleOutsideClick}>
           <div className={styles.modalContent} ref={modalRef}>
-            <span 
-              className={styles.close} 
+            <span
+              className={styles.close}
               onClick={() => setSelectedJob(null)}
               aria-label="Close job details"
             >
               &times;
             </span>
             <h2 className={styles.modalTitle}>{selectedJob.title}</h2>
-            
+
             <div className={styles.jobMeta}>
               <div className={styles.metaItem}>
                 <span className={styles.metaIcon}>📌</span>
@@ -519,12 +551,12 @@ const Careerone = () => {
                 <span>{selectedJob.location}</span>
               </div>
             </div>
-            
+
             <div className={styles.jobDescription}>
               <h3 className={styles.sectionTitle}>Job Description</h3>
               <p>{selectedJob.description}</p>
             </div>
-            
+
             <div className={styles.jobSection}>
               <h3 className={styles.sectionTitle}>Key Responsibilities</h3>
               <ul className={styles.responsibilities}>
@@ -536,7 +568,7 @@ const Careerone = () => {
                 ))}
               </ul>
             </div>
-            
+
             <div className={styles.jobSection}>
               <h3 className={styles.sectionTitle}>Required Skills</h3>
               <ul className={styles.skills}>
@@ -548,15 +580,15 @@ const Careerone = () => {
                 ))}
               </ul>
             </div>
-            
+
             <div className={styles.modalActions}>
-              <button 
-                className={styles.applyButton} 
+              <button
+                className={styles.applyButton}
                 onClick={() => handleApplyClick(selectedJob)}
               >
                 Apply for this Position
               </button>
-              <button 
+              <button
                 className={styles.closeDetailsButton}
                 onClick={() => setSelectedJob(null)}
               >
