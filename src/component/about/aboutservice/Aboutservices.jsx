@@ -10,7 +10,7 @@ const Aboutservices = () => {
         entries.forEach((entry, index) => {
           if (entry.isIntersecting) {
             entry.target.classList.add(styles.visible);
-            entry.target.style.transitionDelay = `${index * 0.2}s`; // stagger
+            entry.target.style.transitionDelay = `${index * 0.1}s`;
           }
         });
       },
@@ -42,7 +42,7 @@ const Aboutservices = () => {
     {
       number: '03.',
       title: 'Integrity',
-      desc: 'We do what we say. We never make fake promises and deliver nothing except accuracy and results!',
+      desc: 'Integrity means doing the right thing even when no one is watching. It reflects honesty, strong moral principles, and a commitment to ethical behavior in every action and decision.',
     },
     {
       number: '04.',
@@ -54,15 +54,37 @@ const Aboutservices = () => {
       title: 'Appreciation',
       desc: 'We nurture our employee-employer relationship with appreciation, rewards, and recognition. We provide a space where they feel valued.',
     },
+    {
+      number: '06.',
+      title: 'Innovation',
+      desc: 'We constantly push boundaries to deliver cutting-edge solutions that drive business growth.',
+    },
+    {
+      number: '07.',
+      title: 'Collaboration',
+      desc: 'We believe in teamwork and partnership to achieve the best results for our clients.',
+    },
+    {
+      number: '08.',
+      title: 'Excellence',
+      desc: 'We strive for excellence in everything we do, delivering quality beyond expectations.',
+    },
+    {
+      number: '09.',
+      title: 'Customer Focus',
+      desc: 'We put our customers at the heart of everything we do, ensuring their success is our success.',
+    }
   ];
 
   return (
     <div className={styles.coreValuesSection}>
-      <h2 className={styles.title}>Core values</h2>
-      <p className={styles.description}>
-        Besides our genius team, we are encircled with a progressive culture and core values that guide our software development direction.
-        These values are deeply embedded in each of us and guide our actions.
-      </p>
+      <div className={styles.header}>
+        <h2 className={styles.title}>Core values</h2>
+        <p className={styles.description}>
+          Besides our genius team, we are encircled with a progressive culture and core values that guide our software development direction.
+          These values are deeply embedded in each of us and guide our actions.
+        </p>
+      </div>
 
       <div className={styles.valuesContainer}>
         {coreValues.map((value, index) => (
@@ -72,8 +94,8 @@ const Aboutservices = () => {
             ref={(el) => (boxesRef.current[index] = el)}
           >
             <div className={styles.number}>{value.number}</div>
-            <h3>{value.title}</h3>
-            <p>{value.desc}</p>
+            <h3 className={styles.valueTitle}>{value.title}</h3>
+            <p className={styles.valueDesc}>{value.desc}</p>
           </div>
         ))}
       </div>

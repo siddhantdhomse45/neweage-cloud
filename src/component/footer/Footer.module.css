@@ -100,7 +100,7 @@
   color: #64ff76;
   position: relative;
   padding-bottom: 0.5rem;
-  text-align: left;            
+  /* text-align: left;             */
   align-self: flex-end;          
   width: 100%;                   
 }
@@ -108,7 +108,7 @@
 
 .columnTitle::after {
   content: '';
-  position: absolute;
+  /* position: absolute; */
   left: 0;
   bottom: 0;
   width: 40px;
@@ -125,7 +125,7 @@
 
 .footerLinkItem {
   margin-bottom: 0.75rem;
-  display: flex;
+  /* display: flex; */
   align-items: center;
 }
 

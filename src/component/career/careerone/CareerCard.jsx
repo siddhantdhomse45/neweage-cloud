@@ -3,43 +3,43 @@ import styles from "./careerCard.module.css";
 
 const cultureData = [
   {
-    icon: "https://www.softgridcomputers.com/img/5_days_working.svg",
+    icon: "/src/assets/woking day.png",
     title: "5 Days Working",
     description: "The 5-day working week provides a structured and predictable work schedule, making it easier for employees to plan their personal lives around their work commitments.",
   },
   {
-    icon: "https://www.softgridcomputers.com/img/personal_growth.svg",
+    icon: "/src/assets/growth.png",
     title: "Personal Growth",
     description: "Establishing clear and achievable objectives helps focus efforts and provides a sense of direction in personal development.",
   },
   {
-    icon: "https://www.softgridcomputers.com/img/technology_advancements.svg",
+    icon: "/src/assets/technology.png",
     title: "Technology Advancement",
     description: "Since technology evolves rapidly, it's essential to keep track of the latest developments. We, at GenXAI Softgrid, provide opportunities to work with advance technologies.",
   },
   {
-    icon: "https://www.softgridcomputers.com/img/equal_opportunity.svg",
+    icon: "/src/assets/equal.png",
     title: "Equal Opportunity",
     description:
       "Promoting fair hiring practices and equal pay for equal work, regardless of gender, race, or other characteristics.",
   },
   {
-    icon: "https://www.softgridcomputers.com/img/training.svg",
+    icon: "/src/assets/training.png",
     title: "Training",
     description: "Employee training is a vital process to equip employees with the necessary skills and knowledge to perform their job roles effectively. We provide on-the-job training, workshops, seminars, and online courses.",
   },
   {
-    icon: "https://www.softgridcomputers.com/img/rewarding.svg",
+    icon: "/src/assets/opportunity.png",
     title: "Rewarding Opportunity",
     description: "We give opportunity for career advancement, such as a promotion or a new challenging role, as it allows you to take on more responsibility, grow professionally, and achieve your career goals.",
   },
   {
-    icon: "https://www.softgridcomputers.com/img/satisfaction.svg",
+    icon: "/src/assets/satisfaction.png",
     title: "Satisfaction",
     description: "We provide a positive and supportive work environment, where employees feel valued, respected, and supported by their colleagues and supervisors for complete job satisfaction.",
   },
   {
-    icon: "https://www.softgridcomputers.com/img/noun-building.svg",
+    icon: "/src/assets/infrastructure.png",
     title: "Infrastructure",
     description: "We ensure that employees have the necessary tools and resources to perform their tasks efficiently and that the organisation can meet its objectives effectively.",
   },
